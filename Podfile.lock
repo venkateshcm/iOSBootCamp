@@ -1,0 +1,45 @@
+PODS:
+  - Alamofire (3.4.2)
+  - AlamofireObjectMapper (3.0.2):
+    - Alamofire (~> 3.2)
+    - ObjectMapper (~> 1.0)
+  - FBSnapshotTestCase (2.1.2):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.2)
+  - FBSnapshotTestCase/Core (2.1.2)
+  - FBSnapshotTestCase/SwiftSupport (2.1.2):
+    - FBSnapshotTestCase/Core
+  - MockFive (0.03)
+  - Nimble (3.2.0)
+  - Nimble-Snapshots (4.2.0):
+    - FBSnapshotTestCase (~> 2.0)
+    - Nimble
+    - Quick
+  - ObjectMapper (1.3.0)
+  - Quick (0.9.3)
+  - Swinject (1.1.4)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.4.1)
+  - AlamofireObjectMapper (~> 3.0)
+  - FBSnapshotTestCase
+  - MockFive
+  - Nimble (~> 3.0)
+  - Nimble-Snapshots
+  - ObjectMapper (~> 1.3.0)
+  - Quick (~> 0.8)
+  - Swinject (~> 1.1.0)
+
+SPEC CHECKSUMS:
+  Alamofire: 6aa33201d20d069e1598891cf928883ff1888c7a
+  AlamofireObjectMapper: 70f97cbf45c01c48d26aa07a1a7059a60ed7411d
+  FBSnapshotTestCase: 918c55861356ee83aee7843d759f55a18ff6982b
+  MockFive: 0a8a473f8c9ae55d852dc0dfa42d0dde8b0f44e6
+  Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
+  Nimble-Snapshots: 4826e3ee211d2c7af27645e35d68b9e9917882e7
+  ObjectMapper: 4eb08a726e9791a93b2632049951b56a7c17e471
+  Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
+  Swinject: 8863ebff588a8574f1bc9af8a6abed11389865f7
+
+PODFILE CHECKSUM: a398d3076ab56f066412c6506187c1604c8a8817
+
+COCOAPODS: 1.0.1
