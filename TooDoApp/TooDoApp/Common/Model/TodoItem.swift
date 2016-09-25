@@ -22,6 +22,10 @@ struct TodoItem: Mappable {
     }
 }
 
+func ==(lhs: TodoItem, rhs: TodoItem) -> Bool {
+    return lhs.identifier == rhs.identifier
+}
+
 struct GetTodosResponse: Mappable {
     var todos: [TodoItem]?
     var error: APIError?

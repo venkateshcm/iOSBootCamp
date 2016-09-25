@@ -72,9 +72,11 @@ class ToDoListView : UIViewController, IToDoListView, UITableViewDataSource, UIT
     }
     
     func showLoading() {
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
     }
     
     func hideLoading() {
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
     }
     
     func redisplayTodos() {
@@ -102,6 +104,25 @@ class ToDoListView : UIViewController, IToDoListView, UITableViewDataSource, UIT
     }
     
     // MARK: UITableViewDelegate methods
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, shouldIndentWhileEditingRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
+        return .Delete
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if (presenter.deleteItemAtIndex(indexPath.row)) {
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        }
+    }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         presenter.selectedItemAtIndex(indexPath.row)

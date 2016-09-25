@@ -54,9 +54,11 @@ class EditTodoView : UIViewController, IEditTodoView {
     }
     
     func showLoading() {
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
     }
     
     func hideLoading() {
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
     }
     
     func showErrorMessage(message: String) {

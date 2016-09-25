@@ -10,14 +10,18 @@ import Foundation
 
 protocol IToDoListPresenter : class {
     func getTodos()
-    func gotTodos(todos: [TodoItem])
-    func failedToGetTodos(error: NSError?)
     var numberOfTodos: Int {get}
     func todoItemDescriptionAtIndex(index: Int) -> String
     func doInitialSetup()
     func addButtonPressed()
     func refreshButtonPressed()
     func selectedItemAtIndex(index: Int)
+    func deleteItemAtIndex(index: Int) -> Bool
+    
+    func gotTodos(todos: [TodoItem])
+    func failedToGetTodos(error: NSError?)
+    func deletedTodoWithID(todoID: String)
+    func failedToDeleteTodo(error: NSError?)
 }
 
 class ToDoListPresenter : IToDoListPresenter {
@@ -58,6 +62,23 @@ class ToDoListPresenter : IToDoListPresenter {
         wireframe.presentEditModule(todo)
     }
     
+    func deleteItemAtIndex(index: Int) -> Bool {
+        guard let items = viewModel.todos where items.count > index else {
+            view.showErrorMessage("Cannot delete this item")
+            return false
+        }
+        let todo = items[index]
+        guard let todoID = todo.identifier else {
+            view.showErrorMessage("Cannot delete this item")
+            return false
+        }
+        viewModel.todos = items.filter({ (item) -> Bool in
+            return !(item == todo)
+        })
+        interceptor.deleteTodoWithID(todoID)
+        return true
+    }
+    
     func gotTodos(todos: [TodoItem]) {
         view.hideLoading()
         viewModel.todos = todos
@@ -67,6 +88,17 @@ class ToDoListPresenter : IToDoListPresenter {
     func failedToGetTodos(error: NSError?) {
         view.hideLoading()
         view.showErrorMessage(error?.localizedDescription ?? "There was a problem while fetching todos")
+    }
+    
+    func deletedTodoWithID(todoID: String) {
+        view.hideLoading()
+        getTodos()
+    }
+    
+    func failedToDeleteTodo(error: NSError?) {
+        view.hideLoading()
+        view.showErrorMessage(error?.localizedDescription ?? "Unable to delete item")
+        getTodos()
     }
     
     var numberOfTodos: Int {

@@ -11,6 +11,7 @@ import Foundation
 protocol IToDoListInterceptor  : class {
     var presenter : IToDoListPresenter? {get set}
     func getTodos()
+    func deleteTodoWithID(todoID: String)
 }
 
 
@@ -37,6 +38,18 @@ class ToDoListInterceptor : IToDoListInterceptor {
             
             }) {[weak self] (response, data, error) in
                 self?.presenter?.failedToGetTodos(error)
+        }
+    }
+    
+    func deleteTodoWithID(todoID: String) {
+        service.deleteTodoWithID(todoID, success: {[weak self] (response) in
+            guard response?.error == nil else {
+                self?.presenter?.failedToDeleteTodo(response?.error?.nsError)
+                return
+            }
+            self?.presenter?.deletedTodoWithID(todoID)
+            }) {[weak self] (response, data, error) in
+                self?.presenter?.failedToDeleteTodo(error)
         }
     }
     
