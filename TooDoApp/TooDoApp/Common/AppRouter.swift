@@ -23,12 +23,13 @@ class AppRouter :IAppRouter {
         
         
         let modules : [String:(appRouter:IAppRouter)->IModule] = [
-            Module.ToDoList.routePath:{(appRouter:IAppRouter) in ToDoListModule(appRouter:appRouter)}
+            Module.ToDoList.routePath : {(appRouter:IAppRouter) in ToDoListModule(appRouter:appRouter)},
+            Module.CreateTodo.routePath : {(appRouter: IAppRouter) in CreateTodoModule(appRouter: appRouter)}
         ]
         
         let assembler = Assembler()
         assembler.applyAssemblies([CommonAssembly()])
-        assembler.applyAssemblies([ToDoListAssembly()])
+        assembler.applyAssemblies([ToDoListAssembly(), CreateTodoAssembly()])
 
         
         return AppRouter(rootVC: vc!, navigationController:getNavigationController(), assembler:assembler, modules: modules)
@@ -47,9 +48,6 @@ class AppRouter :IAppRouter {
         
         return Singleton.instance
     }
-
-    
-    
     
     init(rootVC:UIViewController, navigationController:UINavigationController?, assembler:Assembler, modules:[String:(appRouter:IAppRouter)->IModule]){
         self.rootVC = rootVC
@@ -111,6 +109,8 @@ class AppRouter :IAppRouter {
     
     func dismissViewFromNavigationController(animated:Bool,completion:()->())
     {
+        navigationController?.popViewControllerAnimated(true)
+        completion()
 //        navigationController?.popViewControllerWithHandler(animated,completion:completion)
     }
     

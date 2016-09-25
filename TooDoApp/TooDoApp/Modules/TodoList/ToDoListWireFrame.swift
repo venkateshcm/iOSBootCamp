@@ -11,6 +11,7 @@ import Swinject
 
 protocol IToDoListWireFrame {
     func presentListView(viewModel:ToDoListViewModel)
+    func presentAddModule()
 }
 
 
@@ -24,6 +25,10 @@ class ToDoListWireFrame : IToDoListWireFrame{
     func presentListView(viewModel:ToDoListViewModel){
         let view = appRouter.resolver.resolve(ToDoListView.self, arguments:(appRouter, viewModel))!
         appRouter.displayViewWithoutDismiss(view, animateDisplay: false)
+    }
+    
+    func presentAddModule() {
+        appRouter.presentModule(Module.CreateTodo, parameters: [:])
     }
         
 }

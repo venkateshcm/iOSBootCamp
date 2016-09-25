@@ -46,7 +46,7 @@ class ToDoListPresenter : IToDoListPresenter {
     }
     
     func addButtonPressed() {
-        
+        wireframe.presentAddModule()
     }
     
     func gotTodos(todos: [TodoItem]) {
