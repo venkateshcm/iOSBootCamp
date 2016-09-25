@@ -9,12 +9,20 @@
 import Foundation
 
 protocol IToDoListPresenter : class {
+    func getTodos()
+    func gotTodos(todos: [TodoItem])
+    func failedToGetTodos(error: NSError?)
+    var numberOfTodos: Int {get}
+    func todoItemDescriptionAtIndex(index: Int) -> String
+    func doInitialSetup()
+    func addButtonPressed()
+    func refreshButtonPressed()
 }
 
 class ToDoListPresenter : IToDoListPresenter {
     weak var view:IToDoListView!
     let wireframe:IToDoListWireFrame
-    let viewModel:ToDoListViewModel
+    var viewModel:ToDoListViewModel
     let interceptor:IToDoListInterceptor
     
     init(view:IToDoListView,viewModel:ToDoListViewModel, wireframe:IToDoListWireFrame, interceptor:IToDoListInterceptor){
@@ -22,6 +30,45 @@ class ToDoListPresenter : IToDoListPresenter {
         self.wireframe = wireframe
         self.viewModel = viewModel
         self.interceptor = interceptor
+    }
+    
+    func doInitialSetup() {
+        view.hoookUpEvents()
+    }
+    
+    func getTodos() {
+        view.showLoading()
+        interceptor.getTodos()
+    }
+    
+    func refreshButtonPressed() {
+        getTodos()
+    }
+    
+    func addButtonPressed() {
+        
+    }
+    
+    func gotTodos(todos: [TodoItem]) {
+        view.hideLoading()
+        viewModel.todos = todos
+        view.redisplayTodos()
+    }
+    
+    func failedToGetTodos(error: NSError?) {
+        view.hideLoading()
+        view.showErrorMessage(error?.localizedDescription ?? "There was a problem while fetching todos")
+    }
+    
+    var numberOfTodos: Int {
+        return viewModel.todos?.count ?? 0
+    }
+    
+    func todoItemDescriptionAtIndex(index: Int) -> String {
+        guard let todos = viewModel.todos where todos.count > index else {
+            return ""
+        }
+        return todos[index].description ?? ""
     }
 
 }

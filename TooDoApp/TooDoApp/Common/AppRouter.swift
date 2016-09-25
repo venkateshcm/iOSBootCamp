@@ -36,9 +36,6 @@ class AppRouter :IAppRouter {
     
     private class func getNavigationController() -> UINavigationController {
         let nc = UIApplication.sharedApplication().delegate?.window??.rootViewController as? UINavigationController ?? UINavigationController()
-        nc.navigationBar.translucent = false
-        nc.navigationBar.tintColor = UIColor.whiteColor()
-        nc.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
         return nc
     }
 
