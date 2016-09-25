@@ -72,9 +72,7 @@ class ToDoListPresenter : IToDoListPresenter {
             view.showErrorMessage("Cannot delete this item")
             return false
         }
-        viewModel.todos = items.filter({ (item) -> Bool in
-            return !(item == todo)
-        })
+        viewModel.todos?.removeAtIndex(index)
         interceptor.deleteTodoWithID(todoID)
         return true
     }
