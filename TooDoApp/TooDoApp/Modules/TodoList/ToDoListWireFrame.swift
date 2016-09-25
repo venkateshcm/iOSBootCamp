@@ -12,6 +12,7 @@ import Swinject
 protocol IToDoListWireFrame {
     func presentListView(viewModel:ToDoListViewModel)
     func presentAddModule()
+    func presentEditModule(todo: TodoItem)
 }
 
 
@@ -29,6 +30,10 @@ class ToDoListWireFrame : IToDoListWireFrame{
     
     func presentAddModule() {
         appRouter.presentModule(Module.CreateTodo, parameters: [:])
+    }
+    
+    func presentEditModule(todo: TodoItem) {
+        appRouter.presentModule(Module.EditTodo, parameters: ["todoItem" : todo])
     }
         
 }

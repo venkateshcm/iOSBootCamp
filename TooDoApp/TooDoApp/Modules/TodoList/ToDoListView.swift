@@ -40,6 +40,11 @@ class ToDoListView : UIViewController, IToDoListView, UITableViewDataSource, UIT
     }
     override func viewDidAppear(animated: Bool){
         super.viewDidAppear(animated)
+        
+        guard let selectedIndexPath = tableView?.indexPathForSelectedRow where selectedIndexPath.row < presenter.numberOfTodos else {
+            return
+        }
+        tableView?.deselectRowAtIndexPath(selectedIndexPath, animated: true)
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -94,5 +99,11 @@ class ToDoListView : UIViewController, IToDoListView, UITableViewDataSource, UIT
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
         cell.textLabel?.text = presenter.todoItemDescriptionAtIndex(indexPath.row)
         return cell
+    }
+    
+    // MARK: UITableViewDelegate methods
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        presenter.selectedItemAtIndex(indexPath.row)
     }
 }

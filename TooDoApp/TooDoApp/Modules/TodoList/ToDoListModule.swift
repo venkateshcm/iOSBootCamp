@@ -16,7 +16,7 @@ class ToDoListModule : IModule{
         self.appRouter = appRouter
     }
     
-    func presentView(parameters:[String:AnyObject]){
+    func presentView(parameters:[String:Any]){
         let wireframe = appRouter.resolver.resolve(IToDoListWireFrame.self, argument:appRouter)!
         wireframe.presentListView(ToDoListViewModel())
     }

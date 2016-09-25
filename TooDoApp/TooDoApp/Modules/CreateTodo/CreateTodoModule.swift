@@ -16,7 +16,7 @@ class CreateTodoModule : IModule{
         self.appRouter = appRouter
     }
     
-    func presentView(parameters:[String:AnyObject]){
+    func presentView(parameters:[String:Any]){
         let wireframe = appRouter.resolver.resolve(ICreateTodoWireFrame.self, argument:appRouter)!
         wireframe.presentView(CreateTodoViewModel())
     }

@@ -10,5 +10,5 @@ import Foundation
 
 
 public protocol IModule {
-    func presentView(parameters:[String:AnyObject])
+    func presentView(parameters:[String : Any])
 }

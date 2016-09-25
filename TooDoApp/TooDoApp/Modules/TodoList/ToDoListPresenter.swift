@@ -17,6 +17,7 @@ protocol IToDoListPresenter : class {
     func doInitialSetup()
     func addButtonPressed()
     func refreshButtonPressed()
+    func selectedItemAtIndex(index: Int)
 }
 
 class ToDoListPresenter : IToDoListPresenter {
@@ -47,6 +48,14 @@ class ToDoListPresenter : IToDoListPresenter {
     
     func addButtonPressed() {
         wireframe.presentAddModule()
+    }
+    
+    func selectedItemAtIndex(index: Int) {
+        guard let items = viewModel.todos where items.count > index else {
+            return
+        }
+        let todo = items[index]
+        wireframe.presentEditModule(todo)
     }
     
     func gotTodos(todos: [TodoItem]) {

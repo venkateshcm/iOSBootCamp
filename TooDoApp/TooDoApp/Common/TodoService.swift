@@ -70,7 +70,7 @@ struct TodoService: ITodoService {
     
     func updateTodoWithID(todoID: String, description: String, success: (CreateTodoResponse?) -> Void, failure: NetworkFailureHandler) {
         let url = BASE_URL + "/todos/" + todoID
-        Alamofire.request(.PUT, url, parameters: ["description" : description], headers: authManager.authHeaders).responseString { response in
+        Alamofire.request(.PATCH, url, parameters: ["description" : description], headers: authManager.authHeaders).responseString { response in
             guard let jsonString = response.result.value else {
                 failure(response.response, response.data, response.result.error)
                 return
