@@ -9,6 +9,5 @@
 import Foundation
 
 
-struct ToDoListViewModel {
-    var todos: [TodoItem]?
+struct CreateTodoViewModel {
 }

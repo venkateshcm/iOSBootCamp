@@ -51,6 +51,27 @@
 		84CC7C911D951E4900533283 /* ToDoListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CC7C8F1D951E4900533283 /* ToDoListView.xib */; };
 		84CC7C921D951E4900533283 /* ToDoListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CC7C8F1D951E4900533283 /* ToDoListView.xib */; };
 		F731CDF9242AAAFDE7B3095A /* Pods_TooDoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A92CBD27D71CC2A4C4A8AB /* Pods_TooDoApp.framework */; };
+		FA5408191D97E40E0078EC56 /* TodoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5408181D97E40E0078EC56 /* TodoService.swift */; };
+		FAD44CFF1D97FF3A0099D708 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44CFE1D97FF3A0099D708 /* UIViewControllerExtensions.swift */; };
+		FAD44D081D982FBD0099D708 /* CreateTodoAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D001D982FBD0099D708 /* CreateTodoAssembly.swift */; };
+		FAD44D091D982FBD0099D708 /* CreateTodoInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D011D982FBD0099D708 /* CreateTodoInterceptor.swift */; };
+		FAD44D0A1D982FBD0099D708 /* CreateTodoModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D021D982FBD0099D708 /* CreateTodoModule.swift */; };
+		FAD44D0B1D982FBD0099D708 /* CreateTodoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D031D982FBD0099D708 /* CreateTodoPresenter.swift */; };
+		FAD44D0C1D982FBD0099D708 /* CreateTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D041D982FBD0099D708 /* CreateTodoView.swift */; };
+		FAD44D0D1D982FBD0099D708 /* CreateTodoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD44D051D982FBD0099D708 /* CreateTodoView.xib */; };
+		FAD44D0E1D982FBD0099D708 /* CreateTodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D061D982FBD0099D708 /* CreateTodoViewModel.swift */; };
+		FAD44D0F1D982FBD0099D708 /* CreateTodoWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D071D982FBD0099D708 /* CreateTodoWireFrame.swift */; };
+		FAD44D191D9842300099D708 /* EditTodoAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D111D9842300099D708 /* EditTodoAssembly.swift */; };
+		FAD44D1A1D9842300099D708 /* EditTodoInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D121D9842300099D708 /* EditTodoInterceptor.swift */; };
+		FAD44D1B1D9842300099D708 /* EditTodoModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D131D9842300099D708 /* EditTodoModule.swift */; };
+		FAD44D1C1D9842300099D708 /* EditTodoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D141D9842300099D708 /* EditTodoPresenter.swift */; };
+		FAD44D1D1D9842300099D708 /* EditTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D151D9842300099D708 /* EditTodoView.swift */; };
+		FAD44D1E1D9842300099D708 /* EditTodoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD44D161D9842300099D708 /* EditTodoView.xib */; };
+		FAD44D1F1D9842300099D708 /* EditTodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D171D9842300099D708 /* EditTodoViewModel.swift */; };
+		FAD44D201D9842300099D708 /* EditTodoWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D181D9842300099D708 /* EditTodoWireFrame.swift */; };
+		FAD44D251D9850CF0099D708 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D221D9850CF0099D708 /* APIError.swift */; };
+		FAD44D261D9850CF0099D708 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D231D9850CF0099D708 /* TodoItem.swift */; };
+		FAD44D271D9850CF0099D708 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D241D9850CF0099D708 /* User.swift */; };
 		FE019B5D93E8B7271E972CFF /* Pods_TooDoAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C7939C4EE607F66A6F8DD1F /* Pods_TooDoAppUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +126,27 @@
 		C47C3DDC0368FB493D4C9433 /* Pods-TooDoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TooDoApp.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-TooDoApp/Pods-TooDoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CD3EE076E08F62115424733D /* Pods_TooDoAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TooDoAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A92CBD27D71CC2A4C4A8AB /* Pods_TooDoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TooDoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA5408181D97E40E0078EC56 /* TodoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoService.swift; sourceTree = "<group>"; };
+		FAD44CFE1D97FF3A0099D708 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		FAD44D001D982FBD0099D708 /* CreateTodoAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTodoAssembly.swift; sourceTree = "<group>"; };
+		FAD44D011D982FBD0099D708 /* CreateTodoInterceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTodoInterceptor.swift; sourceTree = "<group>"; };
+		FAD44D021D982FBD0099D708 /* CreateTodoModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTodoModule.swift; sourceTree = "<group>"; };
+		FAD44D031D982FBD0099D708 /* CreateTodoPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTodoPresenter.swift; sourceTree = "<group>"; };
+		FAD44D041D982FBD0099D708 /* CreateTodoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTodoView.swift; sourceTree = "<group>"; };
+		FAD44D051D982FBD0099D708 /* CreateTodoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateTodoView.xib; sourceTree = "<group>"; };
+		FAD44D061D982FBD0099D708 /* CreateTodoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTodoViewModel.swift; sourceTree = "<group>"; };
+		FAD44D071D982FBD0099D708 /* CreateTodoWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTodoWireFrame.swift; sourceTree = "<group>"; };
+		FAD44D111D9842300099D708 /* EditTodoAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTodoAssembly.swift; sourceTree = "<group>"; };
+		FAD44D121D9842300099D708 /* EditTodoInterceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTodoInterceptor.swift; sourceTree = "<group>"; };
+		FAD44D131D9842300099D708 /* EditTodoModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTodoModule.swift; sourceTree = "<group>"; };
+		FAD44D141D9842300099D708 /* EditTodoPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTodoPresenter.swift; sourceTree = "<group>"; };
+		FAD44D151D9842300099D708 /* EditTodoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTodoView.swift; sourceTree = "<group>"; };
+		FAD44D161D9842300099D708 /* EditTodoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditTodoView.xib; sourceTree = "<group>"; };
+		FAD44D171D9842300099D708 /* EditTodoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTodoViewModel.swift; sourceTree = "<group>"; };
+		FAD44D181D9842300099D708 /* EditTodoWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTodoWireFrame.swift; sourceTree = "<group>"; };
+		FAD44D221D9850CF0099D708 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		FAD44D231D9850CF0099D708 /* TodoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
+		FAD44D241D9850CF0099D708 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,11 +243,14 @@
 		84CC7C5B1D95108C00533283 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				FAD44D211D9850CF0099D708 /* Model */,
 				84CC7C5D1D9510BA00533283 /* AppRouter.swift */,
 				84CC7C5E1D9510BA00533283 /* IAppRouter.swift */,
 				84CC7C671D95118900533283 /* IModule.swift */,
 				84CC7C6B1D95121600533283 /* Modules.swift */,
 				84CC7C6F1D95134C00533283 /* CommonAssembly.swift */,
+				FA5408181D97E40E0078EC56 /* TodoService.swift */,
+				FAD44CFE1D97FF3A0099D708 /* UIViewControllerExtensions.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -213,6 +258,8 @@
 		84CC7C731D95140900533283 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FAD44D101D9842300099D708 /* EditTodo */,
+				FA5408111D97E3810078EC56 /* CreateTodo */,
 				84CC7C741D95140900533283 /* TodoList */,
 			);
 			path = Modules;
@@ -244,6 +291,46 @@
 				255815167472506DB9F71446 /* Pods-TooDoAppUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FA5408111D97E3810078EC56 /* CreateTodo */ = {
+			isa = PBXGroup;
+			children = (
+				FAD44D001D982FBD0099D708 /* CreateTodoAssembly.swift */,
+				FAD44D011D982FBD0099D708 /* CreateTodoInterceptor.swift */,
+				FAD44D021D982FBD0099D708 /* CreateTodoModule.swift */,
+				FAD44D031D982FBD0099D708 /* CreateTodoPresenter.swift */,
+				FAD44D041D982FBD0099D708 /* CreateTodoView.swift */,
+				FAD44D051D982FBD0099D708 /* CreateTodoView.xib */,
+				FAD44D061D982FBD0099D708 /* CreateTodoViewModel.swift */,
+				FAD44D071D982FBD0099D708 /* CreateTodoWireFrame.swift */,
+			);
+			path = CreateTodo;
+			sourceTree = "<group>";
+		};
+		FAD44D101D9842300099D708 /* EditTodo */ = {
+			isa = PBXGroup;
+			children = (
+				FAD44D111D9842300099D708 /* EditTodoAssembly.swift */,
+				FAD44D121D9842300099D708 /* EditTodoInterceptor.swift */,
+				FAD44D131D9842300099D708 /* EditTodoModule.swift */,
+				FAD44D141D9842300099D708 /* EditTodoPresenter.swift */,
+				FAD44D151D9842300099D708 /* EditTodoView.swift */,
+				FAD44D161D9842300099D708 /* EditTodoView.xib */,
+				FAD44D171D9842300099D708 /* EditTodoViewModel.swift */,
+				FAD44D181D9842300099D708 /* EditTodoWireFrame.swift */,
+			);
+			path = EditTodo;
+			sourceTree = "<group>";
+		};
+		FAD44D211D9850CF0099D708 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAD44D221D9850CF0099D708 /* APIError.swift */,
+				FAD44D231D9850CF0099D708 /* TodoItem.swift */,
+				FAD44D241D9850CF0099D708 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,7 +445,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD44D0D1D982FBD0099D708 /* CreateTodoView.xib in Resources */,
 				84CC7C341D95069100533283 /* LaunchScreen.storyboard in Resources */,
+				FAD44D1E1D9842300099D708 /* EditTodoView.xib in Resources */,
 				84CC7C311D95069100533283 /* Assets.xcassets in Resources */,
 				84CC7C901D951E4900533283 /* ToDoListView.xib in Resources */,
 			);
@@ -510,19 +599,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD44D1C1D9842300099D708 /* EditTodoPresenter.swift in Sources */,
 				84CC7C8C1D951A8800533283 /* ToDoListWireFrame.swift in Sources */,
+				FAD44D1D1D9842300099D708 /* EditTodoView.swift in Sources */,
+				FAD44D0C1D982FBD0099D708 /* CreateTodoView.swift in Sources */,
+				FAD44D271D9850CF0099D708 /* User.swift in Sources */,
 				84CC7C7A1D95195200533283 /* ToDoListAssembly.swift in Sources */,
+				FAD44D191D9842300099D708 /* EditTodoAssembly.swift in Sources */,
 				84CC7C6C1D95121600533283 /* Modules.swift in Sources */,
 				84CC7C2A1D95069100533283 /* AppDelegate.swift in Sources */,
+				FAD44CFF1D97FF3A0099D708 /* UIViewControllerExtensions.swift in Sources */,
 				84CC7C831D951A8800533283 /* ToDoListPresenter.swift in Sources */,
 				84CC7C681D95118900533283 /* IModule.swift in Sources */,
+				FAD44D261D9850CF0099D708 /* TodoItem.swift in Sources */,
 				84CC7C861D951A8800533283 /* ToDoListView.swift in Sources */,
 				84CC7C621D9510BA00533283 /* IAppRouter.swift in Sources */,
 				84CC7C5F1D9510BA00533283 /* AppRouter.swift in Sources */,
+				FAD44D0A1D982FBD0099D708 /* CreateTodoModule.swift in Sources */,
+				FAD44D201D9842300099D708 /* EditTodoWireFrame.swift in Sources */,
 				84CC7C701D95134C00533283 /* CommonAssembly.swift in Sources */,
+				FAD44D0F1D982FBD0099D708 /* CreateTodoWireFrame.swift in Sources */,
+				FAD44D1B1D9842300099D708 /* EditTodoModule.swift in Sources */,
+				FAD44D0B1D982FBD0099D708 /* CreateTodoPresenter.swift in Sources */,
+				FAD44D1F1D9842300099D708 /* EditTodoViewModel.swift in Sources */,
 				84CC7C891D951A8800533283 /* ToDoListViewModel.swift in Sources */,
 				84CC7C761D95141B00533283 /* ToDoListModule.swift in Sources */,
+				FAD44D251D9850CF0099D708 /* APIError.swift in Sources */,
+				FAD44D0E1D982FBD0099D708 /* CreateTodoViewModel.swift in Sources */,
 				84CC7C801D951A8800533283 /* ToDoListInterceptor.swift in Sources */,
+				FA5408191D97E40E0078EC56 /* TodoService.swift in Sources */,
+				FAD44D1A1D9842300099D708 /* EditTodoInterceptor.swift in Sources */,
+				FAD44D081D982FBD0099D708 /* CreateTodoAssembly.swift in Sources */,
+				FAD44D091D982FBD0099D708 /* CreateTodoInterceptor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

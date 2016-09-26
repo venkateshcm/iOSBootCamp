@@ -1,5 +1,5 @@
 //
-//  ToDoListModule.swift
+//  CreateTodoModule.swift
 //  TooDoApp
 //
 //  Created by admin on 23/09/16.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ToDoListModule : IModule{
+class CreateTodoModule : IModule{
     
     var appRouter:IAppRouter
     
@@ -17,8 +17,8 @@ class ToDoListModule : IModule{
     }
     
     func presentView(parameters:[String:Any]){
-        let wireframe = appRouter.resolver.resolve(IToDoListWireFrame.self, argument:appRouter)!
-        wireframe.presentListView(ToDoListViewModel())
+        let wireframe = appRouter.resolver.resolve(ICreateTodoWireFrame.self, argument:appRouter)!
+        wireframe.presentView(CreateTodoViewModel())
     }
     
 }

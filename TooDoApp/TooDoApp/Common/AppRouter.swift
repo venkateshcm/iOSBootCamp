@@ -23,12 +23,14 @@ class AppRouter :IAppRouter {
         
         
         let modules : [String:(appRouter:IAppRouter)->IModule] = [
-            Module.ToDoList.routePath:{(appRouter:IAppRouter) in ToDoListModule(appRouter:appRouter)}
+            Module.ToDoList.routePath : {(appRouter:IAppRouter) in ToDoListModule(appRouter:appRouter)},
+            Module.CreateTodo.routePath : {(appRouter: IAppRouter) in CreateTodoModule(appRouter: appRouter)},
+            Module.EditTodo.routePath : {(appRouter: IAppRouter) in EditTodoModule(appRouter: appRouter)}
         ]
         
         let assembler = Assembler()
         assembler.applyAssemblies([CommonAssembly()])
-        assembler.applyAssemblies([ToDoListAssembly()])
+        assembler.applyAssemblies([ToDoListAssembly(), CreateTodoAssembly(), EditTodoAssembly()])
 
         
         return AppRouter(rootVC: vc!, navigationController:getNavigationController(), assembler:assembler, modules: modules)
@@ -36,9 +38,6 @@ class AppRouter :IAppRouter {
     
     private class func getNavigationController() -> UINavigationController {
         let nc = UIApplication.sharedApplication().delegate?.window??.rootViewController as? UINavigationController ?? UINavigationController()
-        nc.navigationBar.translucent = false
-        nc.navigationBar.tintColor = UIColor.whiteColor()
-        nc.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
         return nc
     }
 
@@ -50,9 +49,6 @@ class AppRouter :IAppRouter {
         
         return Singleton.instance
     }
-
-    
-    
     
     init(rootVC:UIViewController, navigationController:UINavigationController?, assembler:Assembler, modules:[String:(appRouter:IAppRouter)->IModule]){
         self.rootVC = rootVC
@@ -65,7 +61,7 @@ class AppRouter :IAppRouter {
         return assembler.resolver
     }
     
-    func presentModule(module:Module,parameters:[String:AnyObject]){
+    func presentModule(module:Module,parameters:[String:Any]){
         if let moduleConstuctor = modules[module.routePath] {
             let module = moduleConstuctor(appRouter: self)
             module.presentView(parameters)
@@ -114,6 +110,8 @@ class AppRouter :IAppRouter {
     
     func dismissViewFromNavigationController(animated:Bool,completion:()->())
     {
+        navigationController?.popViewControllerAnimated(true)
+        completion()
 //        navigationController?.popViewControllerWithHandler(animated,completion:completion)
     }
     

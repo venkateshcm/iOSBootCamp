@@ -14,7 +14,7 @@ public protocol IAppRouter : class {
     
     var resolver: ResolverType { get }
     
-    func presentModule(module:Module,parameters:[String:AnyObject])
+    func presentModule(module:Module,parameters:[String:Any])
     
     func displayView(view:UIViewController?, animateDismiss:Bool, animateDisplay:Bool)
     func displayView(view:UIViewController?, animateDismiss:Bool, animateDisplay:Bool, completion:(() -> Void)?)
