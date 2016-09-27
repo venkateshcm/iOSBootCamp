@@ -25,12 +25,13 @@ class AppRouter :IAppRouter {
         let modules : [String:(appRouter:IAppRouter)->IModule] = [
             Module.ToDoList.routePath : {(appRouter:IAppRouter) in ToDoListModule(appRouter:appRouter)},
             Module.CreateTodo.routePath : {(appRouter: IAppRouter) in CreateTodoModule(appRouter: appRouter)},
-            Module.EditTodo.routePath : {(appRouter: IAppRouter) in EditTodoModule(appRouter: appRouter)}
+            Module.EditTodo.routePath : {(appRouter: IAppRouter) in EditTodoModule(appRouter: appRouter)},
+            Module.SignUp.routePath : {(appRouter: IAppRouter) in SignUpModule(appRouter: appRouter)}
         ]
         
         let assembler = Assembler()
         assembler.applyAssemblies([CommonAssembly()])
-        assembler.applyAssemblies([ToDoListAssembly(), CreateTodoAssembly(), EditTodoAssembly()])
+        assembler.applyAssemblies([ToDoListAssembly(), CreateTodoAssembly(), EditTodoAssembly(), SignUpAssembly()])
 
         
         return AppRouter(rootVC: vc!, navigationController:getNavigationController(), assembler:assembler, modules: modules)
@@ -67,6 +68,7 @@ class AppRouter :IAppRouter {
             module.presentView(parameters)
         }
     }
+    
     
     func displayView(view:UIViewController?, animateDismiss:Bool, animateDisplay:Bool){
         displayView(view, animateDismiss:animateDismiss, animateDisplay:animateDisplay, completion:nil)
@@ -123,5 +125,9 @@ class AppRouter :IAppRouter {
     func presentViewController(view:UIViewController, animated:Bool, completion:(() -> Void)?) {
         view.modalPresentationStyle = UIModalPresentationStyle.OverCurrentContext
         self.rootVC.presentViewController(view, animated: animated, completion: completion)
+    }
+    
+    func resetStackToView(view: UIViewController, animated: Bool) {
+        navigationController?.setViewControllers([view], animated: true)
     }
 }

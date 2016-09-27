@@ -30,7 +30,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window.rootViewController = nc
         
         appRouter = AppRouter.sharedInstance
-        appRouter.presentModule(Module.ToDoList,parameters: [:])
+        if (AuthManager.sharedManager.canAuthorize) {
+            appRouter.presentModule(Module.ToDoList,parameters: [:])
+        } else {
+            appRouter.presentModule(Module.SignUp, parameters: [:])
+        }
         
         return true
     }

@@ -10,20 +10,25 @@ import Foundation
 import Alamofire
 
 protocol IAuthManager {
-    mutating func saveToken(token: String)
+    func saveToken(token: String)
     var authHeaders: [String : String] {get}
+    var canAuthorize: Bool {get}
 }
 
-struct AuthManager: IAuthManager {
+class AuthManager: IAuthManager {
     static let sharedManager = AuthManager()
-    private (set) var token: String = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySUQiOiI1N2U2YjI2MmYyMjE2ZGVlZjg0Y2YwOTQiLCJjcmVhdGVkIjoiMjAxNi0wOS0yNVQxMzowOToxMC4yNjBaIn0.XSkxypx6_DQhUyV62YZopQdDJRMzJZz5U_1W6M_z96g"
+    private (set) var token: String = ""
     
-    mutating func saveToken(token: String) {
+    func saveToken(token: String) {
         self.token = token
     }
     
     var authHeaders: [String : String] {
         return ["Authorization" : "Bearer " + token]
+    }
+    
+    var canAuthorize: Bool {
+        return token.characters.count > 0
     }
 }
 
@@ -36,9 +41,11 @@ protocol ITodoService {
     func createTodo(description: String, success: (CreateTodoResponse?) -> Void, failure: NetworkFailureHandler)
     func updateTodoWithID(todoID: String, description: String, success: (CreateTodoResponse?) -> Void, failure: NetworkFailureHandler)
     func deleteTodoWithID(todoID: String, success: (DeleteTodoResponse?) -> Void, failure: NetworkFailureHandler)
+    func signUpWithEmail(email: String, password: String, success:(SignUpResponse?) -> Void, failure: NetworkFailureHandler)
+    func loginWithEmail(email: String, password: String, success:(SignUpResponse?) -> Void, failure: NetworkFailureHandler)
 }
 
-struct TodoService: ITodoService {
+class TodoService: ITodoService {
     private let authManager: IAuthManager
     
     init(authManager: IAuthManager) {
@@ -87,6 +94,40 @@ struct TodoService: ITodoService {
                 return
             }
             success(DeleteTodoResponse(JSONString: jsonString))
+        }
+    }
+    
+    func signUpWithEmail(email: String, password: String, success: (SignUpResponse?) -> Void, failure: NetworkFailureHandler) {
+        let url = BASE_URL + "/register"
+        Alamofire.request(.POST, url, parameters: ["username" : email, "password" : password], headers: [:]).responseString {[weak self] response in
+            guard let jsonString = response.result.value else {
+                failure(response.response, response.data, response.result.error)
+                return
+            }
+            let signupResponse = SignUpResponse(JSONString: jsonString)
+            if let token = signupResponse?.token {
+                self?.authManager.saveToken(token)
+                success(signupResponse)
+            } else {
+                failure(response.response, response.data, signupResponse?.error?.nsError)
+            }
+        }
+    }
+    
+    func loginWithEmail(email: String, password: String, success: (SignUpResponse?) -> Void, failure: NetworkFailureHandler) {
+        let url = BASE_URL + "/login"
+        Alamofire.request(.POST, url, headers: [:]).responseString {[weak self] response in
+            guard let jsonString = response.result.value else {
+                failure(response.response, response.data, response.result.error)
+                return
+            }
+            let signupResponse = SignUpResponse(JSONString: jsonString)
+            if let token = signupResponse?.token {
+                self?.authManager.saveToken(token)
+                success(signupResponse)
+            } else {
+                failure(response.response, response.data, signupResponse?.error?.nsError)
+            }
         }
     }
 }

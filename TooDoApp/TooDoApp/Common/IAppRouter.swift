@@ -26,4 +26,6 @@ public protocol IAppRouter : class {
     
     func stackToViewControllerType<T: UIViewController>(type: T.Type) -> [UIViewController]?
     func setViewControllersToStack(controllers:[UIViewController], animated: Bool)
+    
+    func resetStackToView(view: UIViewController, animated: Bool)
 }
