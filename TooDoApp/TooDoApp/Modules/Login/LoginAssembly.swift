@@ -1,5 +1,5 @@
 //
-//  EditTodoAssembly.swift
+//  LoginAssembly.swift
 //  TooDoApp
 //
 //  Editd by admin on 23/09/16.
@@ -10,29 +10,29 @@ import Foundation
 import Swinject
 
 
-class EditTodoAssembly: AssemblyType {
+class LoginAssembly: AssemblyType {
     
     func assemble(container: Container) {
-        container.register(IEditTodoInterceptor.self) { r in
-            return EditTodoInterceptor(service: TodoService(authManager: AuthManager.sharedManager))
+        container.register(ILoginInterceptor.self) { r in
+            return LoginInterceptor(service: TodoService(authManager: AuthManager.sharedManager))
         }
         
-        container.register(IEditTodoWireFrame.self) { (r, appRouter: IAppRouter) in
-            EditTodoWireFrame(appRouter: appRouter)
+        container.register(ILoginWireFrame.self) { (r, appRouter: IAppRouter) in
+            LoginWireFrame(appRouter: appRouter)
         }
         
-        container.register(IEditTodoPresenter.self) { (r, view: IEditTodoView, viewModel:EditTodoViewModel, appRouter:IAppRouter) in
-            let interceptor = r.resolve(IEditTodoInterceptor.self)!
-            let wireframe = r.resolve(IEditTodoWireFrame.self, argument: appRouter)!
-            let presenter = EditTodoPresenter(view: view, viewModel: viewModel, wireframe: wireframe, interceptor: interceptor)
+        container.register(ILoginPresenter.self) { (r, view: ILoginView, viewModel:LoginViewModel, appRouter:IAppRouter) in
+            let interceptor = r.resolve(ILoginInterceptor.self)!
+            let wireframe = r.resolve(ILoginWireFrame.self, argument: appRouter)!
+            let presenter = LoginPresenter(view: view, viewModel: viewModel, wireframe: wireframe, interceptor: interceptor)
             interceptor.presenter = presenter
             return presenter
         }
         
         
-        container.register(EditTodoView.self) {  (r, appRouter: IAppRouter, viewModel:EditTodoViewModel) in
-            let view = EditTodoView()
-            let presenter = r.resolve(IEditTodoPresenter.self, arguments: (view as IEditTodoView,viewModel:viewModel, appRouter))!
+        container.register(LoginView.self) {  (r, appRouter: IAppRouter, viewModel:LoginViewModel) in
+            let view = LoginView()
+            let presenter = r.resolve(ILoginPresenter.self, arguments: (view as ILoginView,viewModel:viewModel, appRouter))!
             view.presenter = presenter
             return view
         }

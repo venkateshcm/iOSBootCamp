@@ -9,6 +9,8 @@
 import Foundation
 
 
-struct EditTodoViewModel {
-    var todoItem: TodoItem
+struct LoginViewModel {
+    var email: String?
+    var password: String?
+    var loggingIn = false
 }

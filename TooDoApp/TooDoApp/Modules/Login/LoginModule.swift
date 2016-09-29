@@ -1,5 +1,5 @@
 //
-//  EditTodoModule.swift
+//  LoginModule.swift
 //  TooDoApp
 //
 //  Editd by admin on 23/09/16.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class EditTodoModule : IModule{
+class LoginModule : IModule{
     
     var appRouter:IAppRouter
     
@@ -17,11 +17,8 @@ class EditTodoModule : IModule{
     }
     
     func presentView(parameters:[String:Any]){
-        guard let todoItem = parameters["todoItem"] as? TodoItem else {
-            fatalError("Attempting to present Edit Todo Module without a todo item")
-        }
-        let wireframe = appRouter.resolver.resolve(IEditTodoWireFrame.self, argument:appRouter)!
-        wireframe.presentView(EditTodoViewModel(todoItem: todoItem))
+        let wireframe = appRouter.resolver.resolve(ILoginWireFrame.self, argument:appRouter)!
+        wireframe.presentView(LoginViewModel())
     }
     
 }

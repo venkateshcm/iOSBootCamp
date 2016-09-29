@@ -8,20 +8,23 @@
 
 import Foundation
 
-protocol IEditTodoPresenter : class {
+protocol ILoginPresenter : class {
     func doInitialSetup()
-    func saveTodo(description: String?)
-    func savedTodo(todo: TodoItem)
-    func failedToSaveTodo(error: NSError?)
+    func emailFieldDone(text: String?)
+    func passwordFieldDone(text: String?)
+    func login()
+    
+    func loggedInUser(user: User)
+    func failedToLoginUser(error: NSError?)
 }
 
-class EditTodoPresenter : IEditTodoPresenter {
-    weak var view:IEditTodoView!
-    let wireframe:IEditTodoWireFrame
-    var viewModel:EditTodoViewModel
-    let interceptor:IEditTodoInterceptor
+class LoginPresenter : ILoginPresenter {
+    weak var view:ILoginView!
+    let wireframe:ILoginWireFrame
+    var viewModel:LoginViewModel
+    let interceptor:ILoginInterceptor
     
-    init(view:IEditTodoView,viewModel:EditTodoViewModel, wireframe:IEditTodoWireFrame, interceptor:IEditTodoInterceptor){
+    init(view:ILoginView,viewModel:LoginViewModel, wireframe:ILoginWireFrame, interceptor:ILoginInterceptor){
         self.view = view
         self.wireframe = wireframe
         self.viewModel = viewModel
@@ -30,33 +33,57 @@ class EditTodoPresenter : IEditTodoPresenter {
     
     func doInitialSetup() {
         view.hoookUpEvents()
-        view.displayTodoText(viewModel.todoItem.description)
+        view.activateEmailField()
     }
     
-    func saveTodo(description: String?) {
-        guard let todoText = description?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()) where todoText.characters.count > 0 else {
-            view.showErrorMessage("Please enter the todo text")
+    func emailFieldDone(text: String?) {
+        viewModel.email = text
+        if (text?.characters.count ?? 0) > 0 {
+            view.activatePasswordField()
+        }
+    }
+    
+    func passwordFieldDone(text: String?) {
+        viewModel.password = text
+        if (text?.characters.count ?? 0) > 0 {
+            login()
+        }
+    }
+    
+    func login() {
+        view.dismissKeyboard()
+        if viewModel.loggingIn {
             return
         }
         
-        guard let itemID = viewModel.todoItem.identifier else {
-            view.showErrorMessage("This item cannot be saved due to an internal error")
+        guard let email = viewModel.email?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()), password = viewModel.password?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()) else {
+            view.showErrorMessage("Please enter all fields")
             return
         }
         
+        guard email.characters.count > 0 else {
+            view.showErrorMessage("Please enter a valid email address")
+            return
+        }
+        guard password.characters.count > 6 else {
+            view.showErrorMessage("Please enter a valid password (6 characters minimum)")
+            return
+        }
         
         view.showLoading()
-        interceptor.updateDescriptionOfTodoItemWithID(itemID, description: todoText)
+        viewModel.loggingIn = true
+        interceptor.loginWithEmail(email, password: password)
     }
     
-    func savedTodo(todo: TodoItem) {
+    func loggedInUser(user: User) {
         view.hideLoading()
-        wireframe.goBack()
+        viewModel.loggingIn = false
+        wireframe.showHomeScreen()
     }
     
-    func failedToSaveTodo(error: NSError?) {
+    func failedToLoginUser(error: NSError?) {
         view.hideLoading()
-        view.showErrorMessage(error?.localizedDescription ?? "There was an error saving the todo item")
+        viewModel.loggingIn = false
+        view.showErrorMessage(error?.localizedDescription ?? "Cannot login")
     }
-
 }

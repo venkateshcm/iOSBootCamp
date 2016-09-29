@@ -17,7 +17,6 @@ class AppRouter :IAppRouter {
     private let modules : [String:(appRouter:IAppRouter)->IModule]
     private let navigationController:UINavigationController?
     
-    
     private class func createAppRouter() -> IAppRouter {
         let vc = UIApplication.sharedApplication().delegate?.window??.rootViewController!
         
@@ -26,14 +25,13 @@ class AppRouter :IAppRouter {
             Module.ToDoList.routePath : {(appRouter:IAppRouter) in ToDoListModule(appRouter:appRouter)},
             Module.CreateTodo.routePath : {(appRouter: IAppRouter) in CreateTodoModule(appRouter: appRouter)},
             Module.EditTodo.routePath : {(appRouter: IAppRouter) in EditTodoModule(appRouter: appRouter)},
-            Module.SignUp.routePath : {(appRouter: IAppRouter) in SignUpModule(appRouter: appRouter)}
+            Module.SignUp.routePath : {(appRouter: IAppRouter) in SignUpModule(appRouter: appRouter)},
+            Module.Login.routePath : {(appRouter: IAppRouter) in LoginModule(appRouter: appRouter)}
         ]
         
         let assembler = Assembler()
         assembler.applyAssemblies([CommonAssembly()])
-        assembler.applyAssemblies([ToDoListAssembly(), CreateTodoAssembly(), EditTodoAssembly(), SignUpAssembly()])
-
-        
+        assembler.applyAssemblies([ToDoListAssembly(), CreateTodoAssembly(), EditTodoAssembly(), SignUpAssembly(), LoginAssembly()])
         return AppRouter(rootVC: vc!, navigationController:getNavigationController(), assembler:assembler, modules: modules)
     }
     
@@ -41,7 +39,6 @@ class AppRouter :IAppRouter {
         let nc = UIApplication.sharedApplication().delegate?.window??.rootViewController as? UINavigationController ?? UINavigationController()
         return nc
     }
-
     
     class var sharedInstance : IAppRouter {
         struct Singleton {

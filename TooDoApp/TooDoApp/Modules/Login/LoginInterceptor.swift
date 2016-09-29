@@ -8,17 +8,16 @@
 
 import Foundation
 
-protocol IEditTodoInterceptor  : class {
-    var presenter : IEditTodoPresenter? {get set}
-    func updateDescriptionOfTodoItemWithID(itemID: String, description: String)
+protocol ILoginInterceptor  : class {
+    var presenter : ILoginPresenter? {get set}
+    func loginWithEmail(email: String, password: String)
 }
 
-
-class EditTodoInterceptor : IEditTodoInterceptor {
-    weak var _presenter: IEditTodoPresenter?
+class LoginInterceptor : ILoginInterceptor {
+    weak var _presenter: ILoginPresenter?
     var service: ITodoService
     
-    var presenter : IEditTodoPresenter? {
+    var presenter : ILoginPresenter? {
         set { _presenter = newValue }
         get { return _presenter}
     }
@@ -27,16 +26,16 @@ class EditTodoInterceptor : IEditTodoInterceptor {
         self.service = service
     }
     
-    func updateDescriptionOfTodoItemWithID(itemID: String, description: String) {
-        service.updateTodoWithID(itemID, description: description, success: {[weak self] (response) in
-            guard let todo = response?.todo else {
-                self?.presenter?.failedToSaveTodo(response?.error?.nsError)
+    func loginWithEmail(email: String, password: String) {
+        service.loginWithEmail(email, password: password, success: {[weak self] (response) in
+            guard let user = response?.user else {
+                self?.presenter?.failedToLoginUser(response?.error?.nsError)
                 return
             }
-            self?.presenter?.savedTodo(todo)
+            self?.presenter?.loggedInUser(user)
             
             }) {[weak self] (response, data, error) in
-                self?.presenter?.failedToSaveTodo(error)
+                self?.presenter?.failedToLoginUser(error)
         }
     }
 }

@@ -116,7 +116,7 @@ class TodoService: ITodoService {
     
     func loginWithEmail(email: String, password: String, success: (SignUpResponse?) -> Void, failure: NetworkFailureHandler) {
         let url = BASE_URL + "/login"
-        Alamofire.request(.POST, url, headers: [:]).responseString {[weak self] response in
+        Alamofire.request(.POST, url, parameters: ["username" : email, "password" : password], headers: [:]).responseString {[weak self] response in
             guard let jsonString = response.result.value else {
                 failure(response.response, response.data, response.result.error)
                 return

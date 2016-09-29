@@ -9,25 +9,30 @@
 import Foundation
 import Swinject
 
-protocol IEditTodoWireFrame {
-    func presentView(viewModel:EditTodoViewModel)
+protocol ILoginWireFrame {
+    func presentView(viewModel:LoginViewModel)
     func goBack()
+    func showHomeScreen()
 }
 
 
-class EditTodoWireFrame : IEditTodoWireFrame{
+class LoginWireFrame : ILoginWireFrame{
     var appRouter:IAppRouter
     
     init(appRouter:IAppRouter){
         self.appRouter = appRouter
     }
     
-    func presentView(viewModel:EditTodoViewModel){
-        let view = appRouter.resolver.resolve(EditTodoView.self, arguments:(appRouter, viewModel))!
+    func presentView(viewModel:LoginViewModel){
+        let view = appRouter.resolver.resolve(LoginView.self, arguments:(appRouter, viewModel))!
         appRouter.displayViewWithoutDismiss(view, animateDisplay: false)
     }
     
     func goBack() {
         appRouter.dismissViewFromNavigationController(true, completion: {})
+    }
+    
+    func showHomeScreen() {
+        appRouter.presentModule(Module.ToDoList, parameters: [:])
     }
 }
