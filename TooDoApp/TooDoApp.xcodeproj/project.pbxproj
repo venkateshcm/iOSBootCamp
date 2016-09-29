@@ -88,6 +88,14 @@
 		FAD44D571D9A29060099D708 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD44D4F1D9A29060099D708 /* LoginView.xib */; };
 		FAD44D581D9A29060099D708 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D501D9A29060099D708 /* LoginViewModel.swift */; };
 		FAD44D591D9A29060099D708 /* LoginWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D511D9A29060099D708 /* LoginWireFrame.swift */; };
+		FAD44D761D9CD7A50099D708 /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D6E1D9CD7A50099D708 /* ProfileAssembly.swift */; };
+		FAD44D771D9CD7A50099D708 /* ProfileInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D6F1D9CD7A50099D708 /* ProfileInterceptor.swift */; };
+		FAD44D781D9CD7A50099D708 /* ProfileModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D701D9CD7A50099D708 /* ProfileModule.swift */; };
+		FAD44D791D9CD7A50099D708 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D711D9CD7A50099D708 /* ProfilePresenter.swift */; };
+		FAD44D7A1D9CD7A50099D708 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D721D9CD7A50099D708 /* ProfileView.swift */; };
+		FAD44D7B1D9CD7A50099D708 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD44D731D9CD7A50099D708 /* ProfileView.xib */; };
+		FAD44D7C1D9CD7A50099D708 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D741D9CD7A50099D708 /* ProfileViewModel.swift */; };
+		FAD44D7D1D9CD7A50099D708 /* ProfileWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D751D9CD7A50099D708 /* ProfileWireFrame.swift */; };
 		FE019B5D93E8B7271E972CFF /* Pods_TooDoAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C7939C4EE607F66A6F8DD1F /* Pods_TooDoAppUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -179,6 +187,14 @@
 		FAD44D4F1D9A29060099D708 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		FAD44D501D9A29060099D708 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		FAD44D511D9A29060099D708 /* LoginWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWireFrame.swift; sourceTree = "<group>"; };
+		FAD44D6E1D9CD7A50099D708 /* ProfileAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileAssembly.swift; sourceTree = "<group>"; };
+		FAD44D6F1D9CD7A50099D708 /* ProfileInterceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileInterceptor.swift; sourceTree = "<group>"; };
+		FAD44D701D9CD7A50099D708 /* ProfileModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileModule.swift; sourceTree = "<group>"; };
+		FAD44D711D9CD7A50099D708 /* ProfilePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		FAD44D721D9CD7A50099D708 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		FAD44D731D9CD7A50099D708 /* ProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
+		FAD44D741D9CD7A50099D708 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		FAD44D751D9CD7A50099D708 /* ProfileWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileWireFrame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +306,7 @@
 		84CC7C731D95140900533283 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FAD44D6D1D9CD7A50099D708 /* Profile */,
 				FAD44D391D9A28C80099D708 /* Login */,
 				FAD44D281D9914050099D708 /* SignUp */,
 				FAD44D101D9842300099D708 /* EditTodo */,
@@ -395,6 +412,21 @@
 				FAD44D511D9A29060099D708 /* LoginWireFrame.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		FAD44D6D1D9CD7A50099D708 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				FAD44D6E1D9CD7A50099D708 /* ProfileAssembly.swift */,
+				FAD44D6F1D9CD7A50099D708 /* ProfileInterceptor.swift */,
+				FAD44D701D9CD7A50099D708 /* ProfileModule.swift */,
+				FAD44D711D9CD7A50099D708 /* ProfilePresenter.swift */,
+				FAD44D721D9CD7A50099D708 /* ProfileView.swift */,
+				FAD44D731D9CD7A50099D708 /* ProfileView.xib */,
+				FAD44D741D9CD7A50099D708 /* ProfileViewModel.swift */,
+				FAD44D751D9CD7A50099D708 /* ProfileWireFrame.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -513,6 +545,7 @@
 				FAD44D0D1D982FBD0099D708 /* CreateTodoView.xib in Resources */,
 				84CC7C341D95069100533283 /* LaunchScreen.storyboard in Resources */,
 				FAD44D571D9A29060099D708 /* LoginView.xib in Resources */,
+				FAD44D7B1D9CD7A50099D708 /* ProfileView.xib in Resources */,
 				FAD44D1E1D9842300099D708 /* EditTodoView.xib in Resources */,
 				84CC7C311D95069100533283 /* Assets.xcassets in Resources */,
 				84CC7C901D951E4900533283 /* ToDoListView.xib in Resources */,
@@ -667,6 +700,7 @@
 			files = (
 				FAD44D311D9914050099D708 /* SignUpAssembly.swift in Sources */,
 				FAD44D1C1D9842300099D708 /* EditTodoPresenter.swift in Sources */,
+				FAD44D7D1D9CD7A50099D708 /* ProfileWireFrame.swift in Sources */,
 				84CC7C8C1D951A8800533283 /* ToDoListWireFrame.swift in Sources */,
 				FAD44D1D1D9842300099D708 /* EditTodoView.swift in Sources */,
 				FAD44D551D9A29060099D708 /* LoginPresenter.swift in Sources */,
@@ -675,14 +709,18 @@
 				FAD44D531D9A29060099D708 /* LoginInterceptor.swift in Sources */,
 				FAD44D581D9A29060099D708 /* LoginViewModel.swift in Sources */,
 				84CC7C7A1D95195200533283 /* ToDoListAssembly.swift in Sources */,
+				FAD44D7C1D9CD7A50099D708 /* ProfileViewModel.swift in Sources */,
 				FAD44D191D9842300099D708 /* EditTodoAssembly.swift in Sources */,
 				84CC7C6C1D95121600533283 /* Modules.swift in Sources */,
 				84CC7C2A1D95069100533283 /* AppDelegate.swift in Sources */,
 				FAD44CFF1D97FF3A0099D708 /* UIViewControllerExtensions.swift in Sources */,
 				FAD44D591D9A29060099D708 /* LoginWireFrame.swift in Sources */,
+				FAD44D761D9CD7A50099D708 /* ProfileAssembly.swift in Sources */,
 				84CC7C831D951A8800533283 /* ToDoListPresenter.swift in Sources */,
 				84CC7C681D95118900533283 /* IModule.swift in Sources */,
+				FAD44D791D9CD7A50099D708 /* ProfilePresenter.swift in Sources */,
 				FAD44D261D9850CF0099D708 /* TodoItem.swift in Sources */,
+				FAD44D781D9CD7A50099D708 /* ProfileModule.swift in Sources */,
 				FAD44D351D9914050099D708 /* SignUpView.swift in Sources */,
 				84CC7C861D951A8800533283 /* ToDoListView.swift in Sources */,
 				FAD44D541D9A29060099D708 /* LoginModule.swift in Sources */,
@@ -699,11 +737,13 @@
 				FAD44D0F1D982FBD0099D708 /* CreateTodoWireFrame.swift in Sources */,
 				FAD44D561D9A29060099D708 /* LoginView.swift in Sources */,
 				FAD44D1B1D9842300099D708 /* EditTodoModule.swift in Sources */,
+				FAD44D771D9CD7A50099D708 /* ProfileInterceptor.swift in Sources */,
 				FAD44D0B1D982FBD0099D708 /* CreateTodoPresenter.swift in Sources */,
 				FAD44D1F1D9842300099D708 /* EditTodoViewModel.swift in Sources */,
 				84CC7C891D951A8800533283 /* ToDoListViewModel.swift in Sources */,
 				FAD44D521D9A29060099D708 /* LoginAssembly.swift in Sources */,
 				84CC7C761D95141B00533283 /* ToDoListModule.swift in Sources */,
+				FAD44D7A1D9CD7A50099D708 /* ProfileView.swift in Sources */,
 				FAD44D251D9850CF0099D708 /* APIError.swift in Sources */,
 				FAD44D0E1D982FBD0099D708 /* CreateTodoViewModel.swift in Sources */,
 				84CC7C801D951A8800533283 /* ToDoListInterceptor.swift in Sources */,

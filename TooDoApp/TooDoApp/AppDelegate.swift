@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if (AuthManager.sharedManager.canAuthorize) {
             appRouter.presentModule(Module.ToDoList,parameters: [:])
         } else {
-            appRouter.presentModule(Module.Login, parameters: [:])
+            appRouter.presentModule(Module.Profile, parameters: [:])
         }
         
         return true
