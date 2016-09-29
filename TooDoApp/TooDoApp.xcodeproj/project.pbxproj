@@ -72,6 +72,30 @@
 		FAD44D251D9850CF0099D708 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D221D9850CF0099D708 /* APIError.swift */; };
 		FAD44D261D9850CF0099D708 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D231D9850CF0099D708 /* TodoItem.swift */; };
 		FAD44D271D9850CF0099D708 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D241D9850CF0099D708 /* User.swift */; };
+		FAD44D311D9914050099D708 /* SignUpAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D291D9914050099D708 /* SignUpAssembly.swift */; };
+		FAD44D321D9914050099D708 /* SignUpInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D2A1D9914050099D708 /* SignUpInterceptor.swift */; };
+		FAD44D331D9914050099D708 /* SignUpModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D2B1D9914050099D708 /* SignUpModule.swift */; };
+		FAD44D341D9914050099D708 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D2C1D9914050099D708 /* SignUpPresenter.swift */; };
+		FAD44D351D9914050099D708 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D2D1D9914050099D708 /* SignUpView.swift */; };
+		FAD44D361D9914050099D708 /* SignUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD44D2E1D9914050099D708 /* SignUpView.xib */; };
+		FAD44D371D9914050099D708 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D2F1D9914050099D708 /* SignUpViewModel.swift */; };
+		FAD44D381D9914050099D708 /* SignUpWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D301D9914050099D708 /* SignUpWireFrame.swift */; };
+		FAD44D521D9A29060099D708 /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D4A1D9A29060099D708 /* LoginAssembly.swift */; };
+		FAD44D531D9A29060099D708 /* LoginInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D4B1D9A29060099D708 /* LoginInterceptor.swift */; };
+		FAD44D541D9A29060099D708 /* LoginModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D4C1D9A29060099D708 /* LoginModule.swift */; };
+		FAD44D551D9A29060099D708 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D4D1D9A29060099D708 /* LoginPresenter.swift */; };
+		FAD44D561D9A29060099D708 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D4E1D9A29060099D708 /* LoginView.swift */; };
+		FAD44D571D9A29060099D708 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD44D4F1D9A29060099D708 /* LoginView.xib */; };
+		FAD44D581D9A29060099D708 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D501D9A29060099D708 /* LoginViewModel.swift */; };
+		FAD44D591D9A29060099D708 /* LoginWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D511D9A29060099D708 /* LoginWireFrame.swift */; };
+		FAD44D761D9CD7A50099D708 /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D6E1D9CD7A50099D708 /* ProfileAssembly.swift */; };
+		FAD44D771D9CD7A50099D708 /* ProfileInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D6F1D9CD7A50099D708 /* ProfileInterceptor.swift */; };
+		FAD44D781D9CD7A50099D708 /* ProfileModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D701D9CD7A50099D708 /* ProfileModule.swift */; };
+		FAD44D791D9CD7A50099D708 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D711D9CD7A50099D708 /* ProfilePresenter.swift */; };
+		FAD44D7A1D9CD7A50099D708 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D721D9CD7A50099D708 /* ProfileView.swift */; };
+		FAD44D7B1D9CD7A50099D708 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD44D731D9CD7A50099D708 /* ProfileView.xib */; };
+		FAD44D7C1D9CD7A50099D708 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D741D9CD7A50099D708 /* ProfileViewModel.swift */; };
+		FAD44D7D1D9CD7A50099D708 /* ProfileWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D751D9CD7A50099D708 /* ProfileWireFrame.swift */; };
 		FE019B5D93E8B7271E972CFF /* Pods_TooDoAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C7939C4EE607F66A6F8DD1F /* Pods_TooDoAppUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -147,6 +171,30 @@
 		FAD44D221D9850CF0099D708 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		FAD44D231D9850CF0099D708 /* TodoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
 		FAD44D241D9850CF0099D708 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FAD44D291D9914050099D708 /* SignUpAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpAssembly.swift; sourceTree = "<group>"; };
+		FAD44D2A1D9914050099D708 /* SignUpInterceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpInterceptor.swift; sourceTree = "<group>"; };
+		FAD44D2B1D9914050099D708 /* SignUpModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpModule.swift; sourceTree = "<group>"; };
+		FAD44D2C1D9914050099D708 /* SignUpPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		FAD44D2D1D9914050099D708 /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		FAD44D2E1D9914050099D708 /* SignUpView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpView.xib; sourceTree = "<group>"; };
+		FAD44D2F1D9914050099D708 /* SignUpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		FAD44D301D9914050099D708 /* SignUpWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpWireFrame.swift; sourceTree = "<group>"; };
+		FAD44D4A1D9A29060099D708 /* LoginAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
+		FAD44D4B1D9A29060099D708 /* LoginInterceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInterceptor.swift; sourceTree = "<group>"; };
+		FAD44D4C1D9A29060099D708 /* LoginModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModule.swift; sourceTree = "<group>"; };
+		FAD44D4D1D9A29060099D708 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		FAD44D4E1D9A29060099D708 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		FAD44D4F1D9A29060099D708 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		FAD44D501D9A29060099D708 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		FAD44D511D9A29060099D708 /* LoginWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWireFrame.swift; sourceTree = "<group>"; };
+		FAD44D6E1D9CD7A50099D708 /* ProfileAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileAssembly.swift; sourceTree = "<group>"; };
+		FAD44D6F1D9CD7A50099D708 /* ProfileInterceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileInterceptor.swift; sourceTree = "<group>"; };
+		FAD44D701D9CD7A50099D708 /* ProfileModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileModule.swift; sourceTree = "<group>"; };
+		FAD44D711D9CD7A50099D708 /* ProfilePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		FAD44D721D9CD7A50099D708 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		FAD44D731D9CD7A50099D708 /* ProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
+		FAD44D741D9CD7A50099D708 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		FAD44D751D9CD7A50099D708 /* ProfileWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileWireFrame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +306,9 @@
 		84CC7C731D95140900533283 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FAD44D6D1D9CD7A50099D708 /* Profile */,
+				FAD44D391D9A28C80099D708 /* Login */,
+				FAD44D281D9914050099D708 /* SignUp */,
 				FAD44D101D9842300099D708 /* EditTodo */,
 				FA5408111D97E3810078EC56 /* CreateTodo */,
 				84CC7C741D95140900533283 /* TodoList */,
@@ -331,6 +382,51 @@
 				FAD44D241D9850CF0099D708 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FAD44D281D9914050099D708 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				FAD44D291D9914050099D708 /* SignUpAssembly.swift */,
+				FAD44D2A1D9914050099D708 /* SignUpInterceptor.swift */,
+				FAD44D2B1D9914050099D708 /* SignUpModule.swift */,
+				FAD44D2C1D9914050099D708 /* SignUpPresenter.swift */,
+				FAD44D2D1D9914050099D708 /* SignUpView.swift */,
+				FAD44D2E1D9914050099D708 /* SignUpView.xib */,
+				FAD44D2F1D9914050099D708 /* SignUpViewModel.swift */,
+				FAD44D301D9914050099D708 /* SignUpWireFrame.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		FAD44D391D9A28C80099D708 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FAD44D4A1D9A29060099D708 /* LoginAssembly.swift */,
+				FAD44D4B1D9A29060099D708 /* LoginInterceptor.swift */,
+				FAD44D4C1D9A29060099D708 /* LoginModule.swift */,
+				FAD44D4D1D9A29060099D708 /* LoginPresenter.swift */,
+				FAD44D4E1D9A29060099D708 /* LoginView.swift */,
+				FAD44D4F1D9A29060099D708 /* LoginView.xib */,
+				FAD44D501D9A29060099D708 /* LoginViewModel.swift */,
+				FAD44D511D9A29060099D708 /* LoginWireFrame.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		FAD44D6D1D9CD7A50099D708 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				FAD44D6E1D9CD7A50099D708 /* ProfileAssembly.swift */,
+				FAD44D6F1D9CD7A50099D708 /* ProfileInterceptor.swift */,
+				FAD44D701D9CD7A50099D708 /* ProfileModule.swift */,
+				FAD44D711D9CD7A50099D708 /* ProfilePresenter.swift */,
+				FAD44D721D9CD7A50099D708 /* ProfileView.swift */,
+				FAD44D731D9CD7A50099D708 /* ProfileView.xib */,
+				FAD44D741D9CD7A50099D708 /* ProfileViewModel.swift */,
+				FAD44D751D9CD7A50099D708 /* ProfileWireFrame.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -445,8 +541,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD44D361D9914050099D708 /* SignUpView.xib in Resources */,
 				FAD44D0D1D982FBD0099D708 /* CreateTodoView.xib in Resources */,
 				84CC7C341D95069100533283 /* LaunchScreen.storyboard in Resources */,
+				FAD44D571D9A29060099D708 /* LoginView.xib in Resources */,
+				FAD44D7B1D9CD7A50099D708 /* ProfileView.xib in Resources */,
 				FAD44D1E1D9842300099D708 /* EditTodoView.xib in Resources */,
 				84CC7C311D95069100533283 /* Assets.xcassets in Resources */,
 				84CC7C901D951E4900533283 /* ToDoListView.xib in Resources */,
@@ -599,31 +698,52 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD44D311D9914050099D708 /* SignUpAssembly.swift in Sources */,
 				FAD44D1C1D9842300099D708 /* EditTodoPresenter.swift in Sources */,
+				FAD44D7D1D9CD7A50099D708 /* ProfileWireFrame.swift in Sources */,
 				84CC7C8C1D951A8800533283 /* ToDoListWireFrame.swift in Sources */,
 				FAD44D1D1D9842300099D708 /* EditTodoView.swift in Sources */,
+				FAD44D551D9A29060099D708 /* LoginPresenter.swift in Sources */,
 				FAD44D0C1D982FBD0099D708 /* CreateTodoView.swift in Sources */,
 				FAD44D271D9850CF0099D708 /* User.swift in Sources */,
+				FAD44D531D9A29060099D708 /* LoginInterceptor.swift in Sources */,
+				FAD44D581D9A29060099D708 /* LoginViewModel.swift in Sources */,
 				84CC7C7A1D95195200533283 /* ToDoListAssembly.swift in Sources */,
+				FAD44D7C1D9CD7A50099D708 /* ProfileViewModel.swift in Sources */,
 				FAD44D191D9842300099D708 /* EditTodoAssembly.swift in Sources */,
 				84CC7C6C1D95121600533283 /* Modules.swift in Sources */,
 				84CC7C2A1D95069100533283 /* AppDelegate.swift in Sources */,
 				FAD44CFF1D97FF3A0099D708 /* UIViewControllerExtensions.swift in Sources */,
+				FAD44D591D9A29060099D708 /* LoginWireFrame.swift in Sources */,
+				FAD44D761D9CD7A50099D708 /* ProfileAssembly.swift in Sources */,
 				84CC7C831D951A8800533283 /* ToDoListPresenter.swift in Sources */,
 				84CC7C681D95118900533283 /* IModule.swift in Sources */,
+				FAD44D791D9CD7A50099D708 /* ProfilePresenter.swift in Sources */,
 				FAD44D261D9850CF0099D708 /* TodoItem.swift in Sources */,
+				FAD44D781D9CD7A50099D708 /* ProfileModule.swift in Sources */,
+				FAD44D351D9914050099D708 /* SignUpView.swift in Sources */,
 				84CC7C861D951A8800533283 /* ToDoListView.swift in Sources */,
+				FAD44D541D9A29060099D708 /* LoginModule.swift in Sources */,
 				84CC7C621D9510BA00533283 /* IAppRouter.swift in Sources */,
 				84CC7C5F1D9510BA00533283 /* AppRouter.swift in Sources */,
 				FAD44D0A1D982FBD0099D708 /* CreateTodoModule.swift in Sources */,
+				FAD44D341D9914050099D708 /* SignUpPresenter.swift in Sources */,
 				FAD44D201D9842300099D708 /* EditTodoWireFrame.swift in Sources */,
+				FAD44D321D9914050099D708 /* SignUpInterceptor.swift in Sources */,
+				FAD44D381D9914050099D708 /* SignUpWireFrame.swift in Sources */,
 				84CC7C701D95134C00533283 /* CommonAssembly.swift in Sources */,
+				FAD44D331D9914050099D708 /* SignUpModule.swift in Sources */,
+				FAD44D371D9914050099D708 /* SignUpViewModel.swift in Sources */,
 				FAD44D0F1D982FBD0099D708 /* CreateTodoWireFrame.swift in Sources */,
+				FAD44D561D9A29060099D708 /* LoginView.swift in Sources */,
 				FAD44D1B1D9842300099D708 /* EditTodoModule.swift in Sources */,
+				FAD44D771D9CD7A50099D708 /* ProfileInterceptor.swift in Sources */,
 				FAD44D0B1D982FBD0099D708 /* CreateTodoPresenter.swift in Sources */,
 				FAD44D1F1D9842300099D708 /* EditTodoViewModel.swift in Sources */,
 				84CC7C891D951A8800533283 /* ToDoListViewModel.swift in Sources */,
+				FAD44D521D9A29060099D708 /* LoginAssembly.swift in Sources */,
 				84CC7C761D95141B00533283 /* ToDoListModule.swift in Sources */,
+				FAD44D7A1D9CD7A50099D708 /* ProfileView.swift in Sources */,
 				FAD44D251D9850CF0099D708 /* APIError.swift in Sources */,
 				FAD44D0E1D982FBD0099D708 /* CreateTodoViewModel.swift in Sources */,
 				84CC7C801D951A8800533283 /* ToDoListInterceptor.swift in Sources */,

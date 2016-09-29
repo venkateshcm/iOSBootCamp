@@ -25,7 +25,7 @@ class ToDoListWireFrame : IToDoListWireFrame{
     
     func presentListView(viewModel:ToDoListViewModel){
         let view = appRouter.resolver.resolve(ToDoListView.self, arguments:(appRouter, viewModel))!
-        appRouter.displayViewWithoutDismiss(view, animateDisplay: false)
+        appRouter.resetStackToView(view, animated: true)
     }
     
     func presentAddModule() {
