@@ -147,50 +147,70 @@ app.post("/register", function(req, res) {
 		return;
 	}
 
-	User.register(new User({ username: email }), req.body.password, function(error) {
+	User.findOne({ username: email }, function(error, existingUser) {
 		if (error) {
-			return res.json({
-				error: {
-					code: 500,
-					message: error
-				},
-				data: null
-			});
+			return res.status(500).json(dbErrorResponse);
 		}
-		User.findOne({ username: email }, function(error, user) {
-			if (error || !user) {
-				return res.status(500).json({
+		if (existingUser) {
+			return res.status(403).json({
+				data: null,
+				error: {
+					code: 403,
+					message: "This email address is already in use"
+				}
+			})
+		}
+
+		User.register(new User({ username: email }), req.body.password, function(error) {
+			if (error) {
+				return res.json({
 					error: {
 						code: 500,
-						message: "Internal server error"
+						message: error
 					},
 					data: null
 				});
 			}
-			var userInfo = { userID: user._id, created: new Date() };
-			var token = jwt.encode(userInfo, secret);
-			var userObject = user.toObject();
-			delete userObject.hash;
-			delete userObject.salt;
-			res.json({
-				error: null,
-				token: token,
-				user: userObject
+			User.findOne({ username: email }, function(error, user) {
+				if (error || !user) {
+					return res.status(500).json({
+						error: {
+							code: 500,
+							message: "Internal server error"
+						},
+						data: null
+					});
+				}
+				var userInfo = { userID: user._id, iat: new Date() };
+				var token = jwt.encode(userInfo, secret);
+				var userObject = user.toObject();
+				delete userObject.hash;
+				delete userObject.salt;
+				res.status(200).json({
+					error: null,
+					data: {
+						token: token,
+						user: userObject
+					}
+				});
 			});
 		});
 	});
+
 });
 
 app.post('/login', passport.authenticate('local', { session: false }), function(req, res) {
-	var userInfo = { userID: req.user._id, created: new Date() };
+	var userInfo = { userID: req.user._id, iat: new Date() };
 	var token = jwt.encode(userInfo, secret);
 	var userObject = req.user.toObject();
 	delete userObject.hash;
 	delete userObject.salt;
-	res.json({
+	res.status(200).json({
 		error: null,
-		token: token,
-		user: userObject
+		data: {
+			token: token,
+			user: userObject
+		}
 	});
 });
 
