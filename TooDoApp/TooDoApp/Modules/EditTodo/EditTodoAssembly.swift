@@ -14,7 +14,8 @@ class EditTodoAssembly: AssemblyType {
     
     func assemble(container: Container) {
         container.register(IEditTodoInterceptor.self) { r in
-            return EditTodoInterceptor(service: TodoService(authManager: AuthManager.sharedManager))
+            let service = r.resolve(ITodoService.self)!
+            return EditTodoInterceptor(service: service)
         }
         
         container.register(IEditTodoWireFrame.self) { (r, appRouter: IAppRouter) in

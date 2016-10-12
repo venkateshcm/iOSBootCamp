@@ -18,7 +18,9 @@ public class CommonAssembly: AssemblyType {
     }
     
     public func assemble(container: Container) {
-        
+        container.register(ITodoService.self) { r in
+            return TodoService(authManager: AuthManager.sharedManager)
+        }
     }
     
 }

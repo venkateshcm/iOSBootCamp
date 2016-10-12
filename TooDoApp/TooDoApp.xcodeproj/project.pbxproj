@@ -8,6 +8,52 @@
 
 /* Begin PBXBuildFile section */
 		5398CEC0DD080982B92F8572 /* Pods_TooDoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3EE076E08F62115424733D /* Pods_TooDoAppTests.framework */; };
+		849C4CAA1DAE081300175EBF /* SignUpAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D291D9914050099D708 /* SignUpAssembly.swift */; };
+		849C4CAB1DAE081300175EBF /* SignUpAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D291D9914050099D708 /* SignUpAssembly.swift */; };
+		849C4CAC1DAE081700175EBF /* SignUpInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D2A1D9914050099D708 /* SignUpInterceptor.swift */; };
+		849C4CAD1DAE081800175EBF /* SignUpInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D2A1D9914050099D708 /* SignUpInterceptor.swift */; };
+		849C4CAE1DAE081B00175EBF /* SignUpModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D2B1D9914050099D708 /* SignUpModule.swift */; };
+		849C4CAF1DAE081B00175EBF /* SignUpModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D2B1D9914050099D708 /* SignUpModule.swift */; };
+		849C4CB01DAE081E00175EBF /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D2C1D9914050099D708 /* SignUpPresenter.swift */; };
+		849C4CB11DAE081E00175EBF /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D2C1D9914050099D708 /* SignUpPresenter.swift */; };
+		849C4CB21DAE082100175EBF /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D2D1D9914050099D708 /* SignUpView.swift */; };
+		849C4CB31DAE082200175EBF /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D2D1D9914050099D708 /* SignUpView.swift */; };
+		849C4CB41DAE082400175EBF /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D2F1D9914050099D708 /* SignUpViewModel.swift */; };
+		849C4CB51DAE082500175EBF /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D2F1D9914050099D708 /* SignUpViewModel.swift */; };
+		849C4CB61DAE082800175EBF /* SignUpWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D301D9914050099D708 /* SignUpWireFrame.swift */; };
+		849C4CB71DAE082900175EBF /* SignUpWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D301D9914050099D708 /* SignUpWireFrame.swift */; };
+		849C4CB81DAE082F00175EBF /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D4A1D9A29060099D708 /* LoginAssembly.swift */; };
+		849C4CB91DAE083000175EBF /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D4A1D9A29060099D708 /* LoginAssembly.swift */; };
+		849C4CBA1DAE083300175EBF /* LoginInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D4B1D9A29060099D708 /* LoginInterceptor.swift */; };
+		849C4CBB1DAE083400175EBF /* LoginInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D4B1D9A29060099D708 /* LoginInterceptor.swift */; };
+		849C4CBC1DAE083700175EBF /* LoginModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D4C1D9A29060099D708 /* LoginModule.swift */; };
+		849C4CBD1DAE083800175EBF /* LoginModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D4C1D9A29060099D708 /* LoginModule.swift */; };
+		849C4CBE1DAE083B00175EBF /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D4D1D9A29060099D708 /* LoginPresenter.swift */; };
+		849C4CBF1DAE083B00175EBF /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D4D1D9A29060099D708 /* LoginPresenter.swift */; };
+		849C4CC01DAE083E00175EBF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D4E1D9A29060099D708 /* LoginView.swift */; };
+		849C4CC11DAE084000175EBF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D4E1D9A29060099D708 /* LoginView.swift */; };
+		849C4CC21DAE084300175EBF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D501D9A29060099D708 /* LoginViewModel.swift */; };
+		849C4CC31DAE084400175EBF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D501D9A29060099D708 /* LoginViewModel.swift */; };
+		849C4CC41DAE084700175EBF /* LoginWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D511D9A29060099D708 /* LoginWireFrame.swift */; };
+		849C4CC51DAE084800175EBF /* LoginWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D511D9A29060099D708 /* LoginWireFrame.swift */; };
+		849C4CC61DAE084C00175EBF /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D6E1D9CD7A50099D708 /* ProfileAssembly.swift */; };
+		849C4CC71DAE084C00175EBF /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D6E1D9CD7A50099D708 /* ProfileAssembly.swift */; };
+		849C4CC81DAE084F00175EBF /* ProfileInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D6F1D9CD7A50099D708 /* ProfileInterceptor.swift */; };
+		849C4CC91DAE085000175EBF /* ProfileInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D6F1D9CD7A50099D708 /* ProfileInterceptor.swift */; };
+		849C4CCA1DAE085300175EBF /* ProfileModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D701D9CD7A50099D708 /* ProfileModule.swift */; };
+		849C4CCB1DAE085400175EBF /* ProfileModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D701D9CD7A50099D708 /* ProfileModule.swift */; };
+		849C4CCC1DAE085600175EBF /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D711D9CD7A50099D708 /* ProfilePresenter.swift */; };
+		849C4CCD1DAE085700175EBF /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D711D9CD7A50099D708 /* ProfilePresenter.swift */; };
+		849C4CCE1DAE085A00175EBF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D721D9CD7A50099D708 /* ProfileView.swift */; };
+		849C4CCF1DAE085A00175EBF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D721D9CD7A50099D708 /* ProfileView.swift */; };
+		849C4CD01DAE085D00175EBF /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D741D9CD7A50099D708 /* ProfileViewModel.swift */; };
+		849C4CD11DAE085E00175EBF /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D741D9CD7A50099D708 /* ProfileViewModel.swift */; };
+		849C4CD21DAE086000175EBF /* ProfileWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D751D9CD7A50099D708 /* ProfileWireFrame.swift */; };
+		849C4CD31DAE086100175EBF /* ProfileWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D751D9CD7A50099D708 /* ProfileWireFrame.swift */; };
+		849C4CD81DAE0BDD00175EBF /* ToDoListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C4CD71DAE0BDD00175EBF /* ToDoListPresenterTest.swift */; };
+		849C4CDA1DAE0CB700175EBF /* ToDoListViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C4CD91DAE0CB700175EBF /* ToDoListViewMock.swift */; };
+		849C4CDC1DAE0D8F00175EBF /* ToDoListWireframeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C4CDB1DAE0D8F00175EBF /* ToDoListWireframeMock.swift */; };
+		849C4CDE1DAE0E5300175EBF /* ToDoListInterceptorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C4CDD1DAE0E5300175EBF /* ToDoListInterceptorMock.swift */; };
 		84CC7C2A1D95069100533283 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC7C291D95069100533283 /* AppDelegate.swift */; };
 		84CC7C311D95069100533283 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84CC7C301D95069100533283 /* Assets.xcassets */; };
 		84CC7C341D95069100533283 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CC7C321D95069100533283 /* LaunchScreen.storyboard */; };
@@ -50,6 +96,48 @@
 		84CC7C901D951E4900533283 /* ToDoListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CC7C8F1D951E4900533283 /* ToDoListView.xib */; };
 		84CC7C911D951E4900533283 /* ToDoListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CC7C8F1D951E4900533283 /* ToDoListView.xib */; };
 		84CC7C921D951E4900533283 /* ToDoListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CC7C8F1D951E4900533283 /* ToDoListView.xib */; };
+		84CC7C931D98F6E600533283 /* EditTodoAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D111D9842300099D708 /* EditTodoAssembly.swift */; };
+		84CC7C941D98F6E700533283 /* EditTodoAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D111D9842300099D708 /* EditTodoAssembly.swift */; };
+		84CC7C951D98F6EA00533283 /* EditTodoInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D121D9842300099D708 /* EditTodoInterceptor.swift */; };
+		84CC7C961D98F6EB00533283 /* EditTodoInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D121D9842300099D708 /* EditTodoInterceptor.swift */; };
+		84CC7C971D98F6EE00533283 /* EditTodoModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D131D9842300099D708 /* EditTodoModule.swift */; };
+		84CC7C981D98F6EF00533283 /* EditTodoModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D131D9842300099D708 /* EditTodoModule.swift */; };
+		84CC7C991D98F6F300533283 /* EditTodoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D141D9842300099D708 /* EditTodoPresenter.swift */; };
+		84CC7C9A1D98F6F300533283 /* EditTodoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D141D9842300099D708 /* EditTodoPresenter.swift */; };
+		84CC7C9B1D98F6F700533283 /* EditTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D151D9842300099D708 /* EditTodoView.swift */; };
+		84CC7C9C1D98F6F800533283 /* EditTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D151D9842300099D708 /* EditTodoView.swift */; };
+		84CC7C9D1D98F6FB00533283 /* EditTodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D171D9842300099D708 /* EditTodoViewModel.swift */; };
+		84CC7C9E1D98F6FC00533283 /* EditTodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D171D9842300099D708 /* EditTodoViewModel.swift */; };
+		84CC7C9F1D98F6FF00533283 /* EditTodoWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D181D9842300099D708 /* EditTodoWireFrame.swift */; };
+		84CC7CA01D98F70000533283 /* EditTodoWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D181D9842300099D708 /* EditTodoWireFrame.swift */; };
+		84CC7CA11D98F70300533283 /* CreateTodoAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D001D982FBD0099D708 /* CreateTodoAssembly.swift */; };
+		84CC7CA21D98F70400533283 /* CreateTodoAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D001D982FBD0099D708 /* CreateTodoAssembly.swift */; };
+		84CC7CA31D98F70700533283 /* CreateTodoInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D011D982FBD0099D708 /* CreateTodoInterceptor.swift */; };
+		84CC7CA41D98F70700533283 /* CreateTodoInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D011D982FBD0099D708 /* CreateTodoInterceptor.swift */; };
+		84CC7CA51D98F70A00533283 /* CreateTodoModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D021D982FBD0099D708 /* CreateTodoModule.swift */; };
+		84CC7CA61D98F70B00533283 /* CreateTodoModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D021D982FBD0099D708 /* CreateTodoModule.swift */; };
+		84CC7CA71D98F70E00533283 /* CreateTodoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D031D982FBD0099D708 /* CreateTodoPresenter.swift */; };
+		84CC7CA81D98F70F00533283 /* CreateTodoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D031D982FBD0099D708 /* CreateTodoPresenter.swift */; };
+		84CC7CA91D98F71200533283 /* CreateTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D041D982FBD0099D708 /* CreateTodoView.swift */; };
+		84CC7CAA1D98F71200533283 /* CreateTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D041D982FBD0099D708 /* CreateTodoView.swift */; };
+		84CC7CAB1D98F71600533283 /* CreateTodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D061D982FBD0099D708 /* CreateTodoViewModel.swift */; };
+		84CC7CAC1D98F71600533283 /* CreateTodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D061D982FBD0099D708 /* CreateTodoViewModel.swift */; };
+		84CC7CAD1D98F71900533283 /* CreateTodoWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D071D982FBD0099D708 /* CreateTodoWireFrame.swift */; };
+		84CC7CAE1D98F71A00533283 /* CreateTodoWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D071D982FBD0099D708 /* CreateTodoWireFrame.swift */; };
+		84CC7CAF1D98F72100533283 /* ToDoListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC7C791D95195200533283 /* ToDoListAssembly.swift */; };
+		84CC7CB01D98F72200533283 /* ToDoListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC7C791D95195200533283 /* ToDoListAssembly.swift */; };
+		84CC7CB11D98F72F00533283 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D221D9850CF0099D708 /* APIError.swift */; };
+		84CC7CB21D98F73000533283 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D221D9850CF0099D708 /* APIError.swift */; };
+		84CC7CB31D98F73300533283 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D231D9850CF0099D708 /* TodoItem.swift */; };
+		84CC7CB41D98F73300533283 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D231D9850CF0099D708 /* TodoItem.swift */; };
+		84CC7CB51D98F73700533283 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D241D9850CF0099D708 /* User.swift */; };
+		84CC7CB61D98F73700533283 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D241D9850CF0099D708 /* User.swift */; };
+		84CC7CB71D98F74100533283 /* TodoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5408181D97E40E0078EC56 /* TodoService.swift */; };
+		84CC7CB81D98F74200533283 /* TodoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5408181D97E40E0078EC56 /* TodoService.swift */; };
+		84CC7CB91D98F74D00533283 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44CFE1D97FF3A0099D708 /* UIViewControllerExtensions.swift */; };
+		84CC7CBA1D98F74E00533283 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44CFE1D97FF3A0099D708 /* UIViewControllerExtensions.swift */; };
+		84CC7CBB1D98F75200533283 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC7C291D95069100533283 /* AppDelegate.swift */; };
+		84CC7CBC1D98F75300533283 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC7C291D95069100533283 /* AppDelegate.swift */; };
 		F731CDF9242AAAFDE7B3095A /* Pods_TooDoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A92CBD27D71CC2A4C4A8AB /* Pods_TooDoApp.framework */; };
 		FA5408191D97E40E0078EC56 /* TodoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5408181D97E40E0078EC56 /* TodoService.swift */; };
 		FAD44CFF1D97FF3A0099D708 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44CFE1D97FF3A0099D708 /* UIViewControllerExtensions.swift */; };
@@ -121,6 +209,10 @@
 		255815167472506DB9F71446 /* Pods-TooDoAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TooDoAppUITests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-TooDoAppUITests/Pods-TooDoAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		415B30A5448B9AF389B867E7 /* Pods-TooDoAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TooDoAppUITests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-TooDoAppUITests/Pods-TooDoAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		687C97B8EACAE66894765A4D /* Pods-TooDoAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TooDoAppTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-TooDoAppTests/Pods-TooDoAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		849C4CD71DAE0BDD00175EBF /* ToDoListPresenterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListPresenterTest.swift; sourceTree = "<group>"; };
+		849C4CD91DAE0CB700175EBF /* ToDoListViewMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListViewMock.swift; sourceTree = "<group>"; };
+		849C4CDB1DAE0D8F00175EBF /* ToDoListWireframeMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListWireframeMock.swift; sourceTree = "<group>"; };
+		849C4CDD1DAE0E5300175EBF /* ToDoListInterceptorMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListInterceptorMock.swift; sourceTree = "<group>"; };
 		84CC7C261D95069100533283 /* TooDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TooDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CC7C291D95069100533283 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84CC7C301D95069100533283 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -235,6 +327,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		849C4CD41DAE0B8E00175EBF /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				849C4CD51DAE0B8E00175EBF /* TodoList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		849C4CD51DAE0B8E00175EBF /* TodoList */ = {
+			isa = PBXGroup;
+			children = (
+				849C4CD61DAE0B8E00175EBF /* Mocks */,
+				849C4CD71DAE0BDD00175EBF /* ToDoListPresenterTest.swift */,
+			);
+			path = TodoList;
+			sourceTree = "<group>";
+		};
+		849C4CD61DAE0B8E00175EBF /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				849C4CD91DAE0CB700175EBF /* ToDoListViewMock.swift */,
+				849C4CDB1DAE0D8F00175EBF /* ToDoListWireframeMock.swift */,
+				849C4CDD1DAE0E5300175EBF /* ToDoListInterceptorMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		84CC7C1D1D95069100533283 = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +392,7 @@
 		84CC7C3D1D95069100533283 /* TooDoAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				849C4CD41DAE0B8E00175EBF /* Modules */,
 				84CC7C3E1D95069100533283 /* TooDoAppTests.swift */,
 				84CC7C401D95069100533283 /* Info.plist */,
 			);
@@ -482,6 +602,7 @@
 				84CC7C421D95069100533283 /* Frameworks */,
 				84CC7C431D95069100533283 /* Resources */,
 				7892564A7467F51438C1C13A /* [CP] Copy Pods Resources */,
+				849C4CDF1DAE1F5400175EBF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -615,6 +736,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-TooDoAppUITests/Pods-TooDoAppUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		849C4CDF1DAE1F5400175EBF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-TooDoAppUITests/Pods-TooDoAppUITests-frameworks.sh\"";
 		};
 		8AC90695FFD6AC0BC96A223C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -758,17 +892,63 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849C4CC21DAE084300175EBF /* LoginViewModel.swift in Sources */,
+				849C4CB61DAE082800175EBF /* SignUpWireFrame.swift in Sources */,
+				84CC7CBB1D98F75200533283 /* AppDelegate.swift in Sources */,
+				849C4CB41DAE082400175EBF /* SignUpViewModel.swift in Sources */,
+				849C4CC01DAE083E00175EBF /* LoginView.swift in Sources */,
+				849C4CB81DAE082F00175EBF /* LoginAssembly.swift in Sources */,
+				849C4CBE1DAE083B00175EBF /* LoginPresenter.swift in Sources */,
+				84CC7C971D98F6EE00533283 /* EditTodoModule.swift in Sources */,
+				84CC7CA11D98F70300533283 /* CreateTodoAssembly.swift in Sources */,
 				84CC7C601D9510BA00533283 /* AppRouter.swift in Sources */,
+				849C4CD21DAE086000175EBF /* ProfileWireFrame.swift in Sources */,
 				84CC7C6D1D95121600533283 /* Modules.swift in Sources */,
+				849C4CAC1DAE081700175EBF /* SignUpInterceptor.swift in Sources */,
+				849C4CAA1DAE081300175EBF /* SignUpAssembly.swift in Sources */,
+				849C4CD81DAE0BDD00175EBF /* ToDoListPresenterTest.swift in Sources */,
+				849C4CD01DAE085D00175EBF /* ProfileViewModel.swift in Sources */,
+				84CC7CB31D98F73300533283 /* TodoItem.swift in Sources */,
+				84CC7CA91D98F71200533283 /* CreateTodoView.swift in Sources */,
+				849C4CC81DAE084F00175EBF /* ProfileInterceptor.swift in Sources */,
+				84CC7CA31D98F70700533283 /* CreateTodoInterceptor.swift in Sources */,
 				84CC7C3F1D95069100533283 /* TooDoAppTests.swift in Sources */,
+				849C4CC61DAE084C00175EBF /* ProfileAssembly.swift in Sources */,
+				84CC7CB51D98F73700533283 /* User.swift in Sources */,
+				849C4CDC1DAE0D8F00175EBF /* ToDoListWireframeMock.swift in Sources */,
+				84CC7C931D98F6E600533283 /* EditTodoAssembly.swift in Sources */,
 				84CC7C631D9510BA00533283 /* IAppRouter.swift in Sources */,
+				849C4CBA1DAE083300175EBF /* LoginInterceptor.swift in Sources */,
+				84CC7C991D98F6F300533283 /* EditTodoPresenter.swift in Sources */,
+				84CC7CA51D98F70A00533283 /* CreateTodoModule.swift in Sources */,
 				84CC7C871D951A8800533283 /* ToDoListView.swift in Sources */,
+				84CC7C9F1D98F6FF00533283 /* EditTodoWireFrame.swift in Sources */,
+				84CC7CB11D98F72F00533283 /* APIError.swift in Sources */,
+				84CC7CB91D98F74D00533283 /* UIViewControllerExtensions.swift in Sources */,
+				849C4CCA1DAE085300175EBF /* ProfileModule.swift in Sources */,
 				84CC7C8A1D951A8800533283 /* ToDoListViewModel.swift in Sources */,
+				849C4CDE1DAE0E5300175EBF /* ToDoListInterceptorMock.swift in Sources */,
 				84CC7C8D1D951A8800533283 /* ToDoListWireFrame.swift in Sources */,
+				84CC7C9B1D98F6F700533283 /* EditTodoView.swift in Sources */,
 				84CC7C711D95134C00533283 /* CommonAssembly.swift in Sources */,
+				849C4CB21DAE082100175EBF /* SignUpView.swift in Sources */,
+				849C4CC41DAE084700175EBF /* LoginWireFrame.swift in Sources */,
+				84CC7C951D98F6EA00533283 /* EditTodoInterceptor.swift in Sources */,
+				849C4CDA1DAE0CB700175EBF /* ToDoListViewMock.swift in Sources */,
 				84CC7C811D951A8800533283 /* ToDoListInterceptor.swift in Sources */,
+				84CC7CAF1D98F72100533283 /* ToDoListAssembly.swift in Sources */,
+				84CC7CB71D98F74100533283 /* TodoService.swift in Sources */,
+				849C4CCE1DAE085A00175EBF /* ProfileView.swift in Sources */,
+				84CC7C9D1D98F6FB00533283 /* EditTodoViewModel.swift in Sources */,
+				849C4CAE1DAE081B00175EBF /* SignUpModule.swift in Sources */,
+				84CC7CAB1D98F71600533283 /* CreateTodoViewModel.swift in Sources */,
 				84CC7C841D951A8800533283 /* ToDoListPresenter.swift in Sources */,
+				849C4CCC1DAE085600175EBF /* ProfilePresenter.swift in Sources */,
 				84CC7C691D95118900533283 /* IModule.swift in Sources */,
+				84CC7CA71D98F70E00533283 /* CreateTodoPresenter.swift in Sources */,
+				849C4CB01DAE081E00175EBF /* SignUpPresenter.swift in Sources */,
+				84CC7CAD1D98F71900533283 /* CreateTodoWireFrame.swift in Sources */,
+				849C4CBC1DAE083700175EBF /* LoginModule.swift in Sources */,
 				84CC7C771D95141B00533283 /* ToDoListModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -777,17 +957,59 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849C4CC31DAE084400175EBF /* LoginViewModel.swift in Sources */,
+				849C4CB71DAE082900175EBF /* SignUpWireFrame.swift in Sources */,
+				84CC7CBC1D98F75300533283 /* AppDelegate.swift in Sources */,
+				849C4CB51DAE082500175EBF /* SignUpViewModel.swift in Sources */,
+				849C4CC11DAE084000175EBF /* LoginView.swift in Sources */,
+				849C4CB91DAE083000175EBF /* LoginAssembly.swift in Sources */,
+				849C4CBF1DAE083B00175EBF /* LoginPresenter.swift in Sources */,
+				84CC7C981D98F6EF00533283 /* EditTodoModule.swift in Sources */,
+				84CC7CA21D98F70400533283 /* CreateTodoAssembly.swift in Sources */,
 				84CC7C611D9510BA00533283 /* AppRouter.swift in Sources */,
+				849C4CD31DAE086100175EBF /* ProfileWireFrame.swift in Sources */,
 				84CC7C6E1D95121600533283 /* Modules.swift in Sources */,
+				849C4CAD1DAE081800175EBF /* SignUpInterceptor.swift in Sources */,
+				849C4CAB1DAE081300175EBF /* SignUpAssembly.swift in Sources */,
+				849C4CD11DAE085E00175EBF /* ProfileViewModel.swift in Sources */,
+				84CC7CB41D98F73300533283 /* TodoItem.swift in Sources */,
+				84CC7CAA1D98F71200533283 /* CreateTodoView.swift in Sources */,
+				849C4CC91DAE085000175EBF /* ProfileInterceptor.swift in Sources */,
+				84CC7CA41D98F70700533283 /* CreateTodoInterceptor.swift in Sources */,
 				84CC7C4A1D95069100533283 /* TooDoAppUITests.swift in Sources */,
+				849C4CC71DAE084C00175EBF /* ProfileAssembly.swift in Sources */,
+				84CC7CB61D98F73700533283 /* User.swift in Sources */,
+				84CC7C941D98F6E700533283 /* EditTodoAssembly.swift in Sources */,
 				84CC7C641D9510BA00533283 /* IAppRouter.swift in Sources */,
+				849C4CBB1DAE083400175EBF /* LoginInterceptor.swift in Sources */,
+				84CC7C9A1D98F6F300533283 /* EditTodoPresenter.swift in Sources */,
+				84CC7CA61D98F70B00533283 /* CreateTodoModule.swift in Sources */,
 				84CC7C881D951A8800533283 /* ToDoListView.swift in Sources */,
+				84CC7CA01D98F70000533283 /* EditTodoWireFrame.swift in Sources */,
+				84CC7CB21D98F73000533283 /* APIError.swift in Sources */,
+				84CC7CBA1D98F74E00533283 /* UIViewControllerExtensions.swift in Sources */,
+				849C4CCB1DAE085400175EBF /* ProfileModule.swift in Sources */,
 				84CC7C8B1D951A8800533283 /* ToDoListViewModel.swift in Sources */,
 				84CC7C8E1D951A8800533283 /* ToDoListWireFrame.swift in Sources */,
+				84CC7C9C1D98F6F800533283 /* EditTodoView.swift in Sources */,
 				84CC7C721D95134C00533283 /* CommonAssembly.swift in Sources */,
+				849C4CB31DAE082200175EBF /* SignUpView.swift in Sources */,
+				849C4CC51DAE084800175EBF /* LoginWireFrame.swift in Sources */,
+				84CC7C961D98F6EB00533283 /* EditTodoInterceptor.swift in Sources */,
 				84CC7C821D951A8800533283 /* ToDoListInterceptor.swift in Sources */,
+				84CC7CB01D98F72200533283 /* ToDoListAssembly.swift in Sources */,
+				84CC7CB81D98F74200533283 /* TodoService.swift in Sources */,
+				849C4CCF1DAE085A00175EBF /* ProfileView.swift in Sources */,
+				84CC7C9E1D98F6FC00533283 /* EditTodoViewModel.swift in Sources */,
+				849C4CAF1DAE081B00175EBF /* SignUpModule.swift in Sources */,
+				84CC7CAC1D98F71600533283 /* CreateTodoViewModel.swift in Sources */,
 				84CC7C851D951A8800533283 /* ToDoListPresenter.swift in Sources */,
+				849C4CCD1DAE085700175EBF /* ProfilePresenter.swift in Sources */,
 				84CC7C6A1D95118900533283 /* IModule.swift in Sources */,
+				84CC7CA81D98F70F00533283 /* CreateTodoPresenter.swift in Sources */,
+				849C4CB11DAE081E00175EBF /* SignUpPresenter.swift in Sources */,
+				84CC7CAE1D98F71A00533283 /* CreateTodoWireFrame.swift in Sources */,
+				849C4CBD1DAE083800175EBF /* LoginModule.swift in Sources */,
 				84CC7C781D95141B00533283 /* ToDoListModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

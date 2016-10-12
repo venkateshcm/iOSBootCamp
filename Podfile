@@ -11,6 +11,11 @@ def common_pods
     pod 'ObjectMapper', '~> 1.3.0'
     pod 'AlamofireObjectMapper', '~> 3.0'
     pod 'Swinject', '~> 1.1.0'
+    
+    pod 'MockFive'
+    
+    pod 'SBTUITestTunnel/Server', :git => 'https://github.com/venkateshcm/SBTUITestTunnel'
+    pod 'SBTUITestTunnel/Client', :git => 'https://github.com/venkateshcm/SBTUITestTunnel'
 end
 
 def common_test_pods
@@ -24,16 +29,19 @@ end
 target 'TooDoApp' do
     project "TooDoApp/TooDoApp.xcodeproj"
     common_pods
+    
 end
 
 
 target 'TooDoAppTests' do
     project "TooDoApp/TooDoApp.xcodeproj"
     common_test_pods
+    common_pods    
 end
 
 
 target 'TooDoAppUITests' do
     project "TooDoApp/TooDoApp.xcodeproj"
     common_test_pods
+    common_pods
 end

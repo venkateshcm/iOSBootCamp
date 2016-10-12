@@ -14,7 +14,8 @@ class ProfileAssembly: AssemblyType {
     
     func assemble(container: Container) {
         container.register(IProfileInterceptor.self) { r in
-            return ProfileInterceptor(service: TodoService(authManager: AuthManager.sharedManager))
+            let service = r.resolve(ITodoService.self)!
+            return ProfileInterceptor(service: service)
         }
         
         container.register(IProfileWireFrame.self) { (r, appRouter: IAppRouter) in

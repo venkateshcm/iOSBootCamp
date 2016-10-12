@@ -16,6 +16,12 @@ struct TodoItem: Mappable {
     init?(_ map: Map) {
     }
     
+    init(identifier: String, description:String){
+        self.identifier = identifier
+        self.description = description
+    }
+
+    
     mutating func mapping(map: Map) {
         description <- map["description"]
         identifier <- map["_id"]

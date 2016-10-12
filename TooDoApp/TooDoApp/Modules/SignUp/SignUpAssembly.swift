@@ -14,7 +14,8 @@ class SignUpAssembly: AssemblyType {
     
     func assemble(container: Container) {
         container.register(ISignUpInterceptor.self) { r in
-            return SignUpInterceptor(service: TodoService(authManager: AuthManager.sharedManager))
+            let service = r.resolve(ITodoService.self)!
+            return SignUpInterceptor(service: service)
         }
         
         container.register(ISignUpWireFrame.self) { (r, appRouter: IAppRouter) in

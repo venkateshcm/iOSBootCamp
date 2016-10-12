@@ -14,7 +14,8 @@ class ToDoListAssembly: AssemblyType {
     
     func assemble(container: Container) {
         container.register(IToDoListInterceptor.self) { r in
-            return ToDoListInterceptor(service: TodoService(authManager: AuthManager.sharedManager))
+            let service = r.resolve(ITodoService.self)!
+            return ToDoListInterceptor(service: service)
         }
         
         container.register(IToDoListWireFrame.self) { (r, appRouter: IAppRouter) in

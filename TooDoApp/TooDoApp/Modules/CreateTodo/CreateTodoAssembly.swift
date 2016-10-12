@@ -14,7 +14,8 @@ class CreateTodoAssembly: AssemblyType {
     
     func assemble(container: Container) {
         container.register(ICreateTodoInterceptor.self) { r in
-            return CreateTodoInterceptor(service: TodoService(authManager: AuthManager.sharedManager))
+            let service = r.resolve(ITodoService.self)!
+            return CreateTodoInterceptor(service: service)
         }
         
         container.register(ICreateTodoWireFrame.self) { (r, appRouter: IAppRouter) in

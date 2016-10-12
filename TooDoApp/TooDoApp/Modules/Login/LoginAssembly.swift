@@ -14,7 +14,8 @@ class LoginAssembly: AssemblyType {
     
     func assemble(container: Container) {
         container.register(ILoginInterceptor.self) { r in
-            return LoginInterceptor(service: TodoService(authManager: AuthManager.sharedManager))
+            let service = r.resolve(ITodoService.self)!
+            return LoginInterceptor(service: service)
         }
         
         container.register(ILoginWireFrame.self) { (r, appRouter: IAppRouter) in
