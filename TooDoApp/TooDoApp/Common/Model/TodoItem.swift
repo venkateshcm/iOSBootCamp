@@ -16,7 +16,7 @@ struct TodoItem: Mappable {
     init?(_ map: Map) {
     }
     
-    init(identifier: String, description:String){
+    init(identifier: String?, description:String?){
         self.identifier = identifier
         self.description = description
     }

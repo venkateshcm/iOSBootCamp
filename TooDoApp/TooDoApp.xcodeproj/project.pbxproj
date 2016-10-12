@@ -1129,8 +1129,39 @@
 			baseConfigurationReference = C47C3DDC0368FB493D4C9433 /* Pods-TooDoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Alamofire\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/AlamofireObjectMapper\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/FXKeychain\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/GCDWebServer\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/MockFive\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/ObjectMapper\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/SBTUITestTunnel\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Swinject\"",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks\n\n$(PLATFORM_DIR)/Developer/Library/Frameworks\n$(PLATFORM_DIR)/Developer/Library/Frameworks\n\n",
+				);
 				INFOPLIST_FILE = TooDoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"AlamofireObjectMapper\"",
+					"-framework",
+					"\"FXKeychain\"",
+					"-framework",
+					"\"GCDWebServer\"",
+					"-framework",
+					"\"MockFive\"",
+					"-framework",
+					"\"ObjectMapper\"",
+					"-framework",
+					"\"SBTUITestTunnel\"",
+					"-framework",
+					"\"Swinject\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ios.TooDoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1141,8 +1172,39 @@
 			baseConfigurationReference = 01CE34ECE89BD031903C5078 /* Pods-TooDoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Alamofire\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/AlamofireObjectMapper\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/FXKeychain\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/GCDWebServer\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/MockFive\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/ObjectMapper\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/SBTUITestTunnel\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Swinject\"",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks\n\n$(PLATFORM_DIR)/Developer/Library/Frameworks\n$(PLATFORM_DIR)/Developer/Library/Frameworks\n\n",
+				);
 				INFOPLIST_FILE = TooDoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"AlamofireObjectMapper\"",
+					"-framework",
+					"\"FXKeychain\"",
+					"-framework",
+					"\"GCDWebServer\"",
+					"-framework",
+					"\"MockFive\"",
+					"-framework",
+					"\"ObjectMapper\"",
+					"-framework",
+					"\"SBTUITestTunnel\"",
+					"-framework",
+					"\"Swinject\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ios.TooDoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

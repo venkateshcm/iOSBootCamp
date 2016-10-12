@@ -28,5 +28,6 @@ class ToDoListInterceptorMock : Mock, IToDoListInterceptor {
     
     func deleteTodoWithID(todoID: String){
         stub(identifier: "delete ToDo With Id", arguments: todoID)
+        _presenter?.deletedTodoWithID(todoID)
     }
 }

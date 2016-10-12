@@ -21,7 +21,7 @@ class ToDoListWireFrameMock : Mock, IToDoListWireFrame {
     }
     
     func presentEditModule(todo: TodoItem){
-        stub(identifier: "present Edit Module")
+        stub(identifier: "present Edit Module", arguments: todo.identifier)
     }
     
 }
