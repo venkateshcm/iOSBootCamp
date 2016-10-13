@@ -26,13 +26,12 @@ class AppRouter :IAppRouter {
             Module.CreateTodo.routePath : {(appRouter: IAppRouter) in CreateTodoModule(appRouter: appRouter)},
             Module.EditTodo.routePath : {(appRouter: IAppRouter) in EditTodoModule(appRouter: appRouter)},
             Module.SignUp.routePath : {(appRouter: IAppRouter) in SignUpModule(appRouter: appRouter)},
-            Module.Login.routePath : {(appRouter: IAppRouter) in LoginModule(appRouter: appRouter)},
             Module.Profile.routePath : {(appRouter: IAppRouter) in ProfileModule(appRouter: appRouter)}
         ]
         
         let assembler = Assembler()
         assembler.applyAssemblies([CommonAssembly()])
-        assembler.applyAssemblies([ToDoListAssembly(), CreateTodoAssembly(), EditTodoAssembly(), SignUpAssembly(), LoginAssembly(), ProfileAssembly()])
+        assembler.applyAssemblies([ToDoListAssembly(), CreateTodoAssembly(), EditTodoAssembly(), SignUpAssembly(),  ProfileAssembly()])
         return AppRouter(rootVC: vc!, navigationController:getNavigationController(), assembler:assembler, modules: modules)
     }
     

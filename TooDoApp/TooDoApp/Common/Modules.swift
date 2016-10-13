@@ -10,7 +10,7 @@ import Foundation
 
 public enum Module{
 
-    case ToDoList, CreateTodo, EditTodo, SignUp, Login, Profile
+    case ToDoList, CreateTodo, EditTodo, SignUp, Profile
     
     public var routePath: String {
         switch self {
@@ -25,9 +25,6 @@ public enum Module{
             
         case .SignUp:
             return "/Modules/SignUp"
-            
-        case .Login:
-            return "/Modules/Login"
             
         case .Profile:
             return "/Modules/Profile"
