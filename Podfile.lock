@@ -19,6 +19,21 @@ PODS:
     - Nimble
     - Quick
   - ObjectMapper (1.3.0)
+  - OHHTTPStubs (5.2.1):
+    - OHHTTPStubs/Default (= 5.2.1)
+  - OHHTTPStubs/Core (5.2.1)
+  - OHHTTPStubs/Default (5.2.1):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (5.2.1):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (5.2.1):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (5.2.1)
+  - OHHTTPStubs/Swift (5.2.1):
+    - OHHTTPStubs/Core
   - Quick (0.9.3)
   - SBTUITestTunnel/Client (1.0.2)
   - SBTUITestTunnel/Server (1.0.2):
@@ -34,6 +49,8 @@ DEPENDENCIES:
   - Nimble (~> 3.0)
   - Nimble-Snapshots
   - ObjectMapper (~> 1.3.0)
+  - OHHTTPStubs
+  - OHHTTPStubs/Swift
   - Quick (~> 0.8)
   - SBTUITestTunnel/Client (from `https://github.com/venkateshcm/SBTUITestTunnel`)
   - SBTUITestTunnel/Server (from `https://github.com/venkateshcm/SBTUITestTunnel`)
@@ -58,10 +75,11 @@ SPEC CHECKSUMS:
   Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
   Nimble-Snapshots: 4826e3ee211d2c7af27645e35d68b9e9917882e7
   ObjectMapper: 4eb08a726e9791a93b2632049951b56a7c17e471
+  OHHTTPStubs: 3a42f25c00563b71355ac73112ba2324e9e6cef4
   Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
   SBTUITestTunnel: 2ab3917cd90157d622c0dc7d06cf976bd74b96fe
   Swinject: 8863ebff588a8574f1bc9af8a6abed11389865f7
 
-PODFILE CHECKSUM: 3d04429dc557287ae944204554fa2e602b66b960
+PODFILE CHECKSUM: 71b8e3f28fa8f7bddd013de77e0a0e4d74590a92
 
 COCOAPODS: 1.0.1

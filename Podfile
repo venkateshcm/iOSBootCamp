@@ -24,6 +24,10 @@ def common_test_pods
     pod 'FBSnapshotTestCase'
     pod 'Nimble-Snapshots'
     pod 'MockFive'
+    
+    pod 'OHHTTPStubs'
+    pod 'OHHTTPStubs/Swift'
+    
 end
 
 target 'TooDoApp' do

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5398CEC0DD080982B92F8572 /* Pods_TooDoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3EE076E08F62115424733D /* Pods_TooDoAppTests.framework */; };
+		8479855D1DAF45F3008501BE /* registration_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 8479855C1DAF45F3008501BE /* registration_response.json */; };
 		849C4CAA1DAE081300175EBF /* SignUpAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D291D9914050099D708 /* SignUpAssembly.swift */; };
 		849C4CAB1DAE081300175EBF /* SignUpAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D291D9914050099D708 /* SignUpAssembly.swift */; };
 		849C4CAC1DAE081700175EBF /* SignUpInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44D2A1D9914050099D708 /* SignUpInterceptor.swift */; };
@@ -209,6 +210,7 @@
 		255815167472506DB9F71446 /* Pods-TooDoAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TooDoAppUITests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-TooDoAppUITests/Pods-TooDoAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		415B30A5448B9AF389B867E7 /* Pods-TooDoAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TooDoAppUITests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-TooDoAppUITests/Pods-TooDoAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		687C97B8EACAE66894765A4D /* Pods-TooDoAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TooDoAppTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-TooDoAppTests/Pods-TooDoAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8479855C1DAF45F3008501BE /* registration_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = registration_response.json; sourceTree = "<group>"; };
 		849C4CD71DAE0BDD00175EBF /* ToDoListPresenterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListPresenterTest.swift; sourceTree = "<group>"; };
 		849C4CD91DAE0CB700175EBF /* ToDoListViewMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListViewMock.swift; sourceTree = "<group>"; };
 		849C4CDB1DAE0D8F00175EBF /* ToDoListWireframeMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListWireframeMock.swift; sourceTree = "<group>"; };
@@ -327,6 +329,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8479855B1DAF45F3008501BE /* fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				8479855C1DAF45F3008501BE /* registration_response.json */,
+			);
+			path = fixtures;
+			sourceTree = "<group>";
+		};
 		849C4CD41DAE0B8E00175EBF /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,6 +412,7 @@
 		84CC7C481D95069100533283 /* TooDoAppUITests */ = {
 			isa = PBXGroup;
 			children = (
+				8479855B1DAF45F3008501BE /* fixtures */,
 				84CC7C491D95069100533283 /* TooDoAppUITests.swift */,
 				84CC7C4B1D95069100533283 /* Info.plist */,
 			);
@@ -686,6 +697,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84CC7C921D951E4900533283 /* ToDoListView.xib in Resources */,
+				8479855D1DAF45F3008501BE /* registration_response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
