@@ -34,7 +34,6 @@ class ProfileWireFrame : IProfileWireFrame{
     }
     
     func showLoginModule() {
-        appRouter.presentModule(Module.Login, parameters: [:])
     }
     
     func showSignUpModule() {
