@@ -16,19 +16,21 @@ class VIPERAssembly: AssemblyType {
             VIPERInteractor()
         }
 
-        container.register(IVIPERWireFrame.self) { (r, parentRouter: IAppRouter) in
-            VIPERWireFrame(parentRouter: parentRouter)
+        container.register(IVIPERWireFrame.self) { (r, appRouter: IAppRouter) in
+            VIPERWireFrame(appRouter: appRouter)
         }
 
-        container.register(IVIPERPresenter.self) { (r, view: IVIPERView, parentRouter: IAppRouter) in
+        container.register(IVIPERPresenter.self) { (r, view: IVIPERView, viewModel:VIPERViewModel, appRouter: IAppRouter) in
             let interactor = r.resolve(IVIPERInteractor.self)!
-            let wireframe = r.resolve(IVIPERWireFrame.self, argument: parentRouter)!
-            return VIPERPresenter(view: view, interactor: interactor, wireframe: wireframe)
+            let wireframe = r.resolve(IVIPERWireFrame.self, argument: appRouter)!
+            let presenter = VIPERPresenter(view: view, viewModel:viewModel, interactor: interactor, wireframe: wireframe)
+            interactor.presenter = presenter
+            return presenter
         }
 
-        container.register(IVIPERView.self) {  (r, parentRouter: IAppRouter) in
+        container.register(IVIPERView.self) {  (r, viewModel:VIPERViewModel ,appRouter: IAppRouter) in
             let view = VIPERView()
-            let presenter = r.resolve(IVIPERPresenter.self, arguments: (view as IVIPERView, parentRouter))!
+            let presenter = r.resolve(IVIPERPresenter.self, arguments: (view as IVIPERView,viewModel:viewModel, appRouter))!
             view.presenter = presenter
 
             return view

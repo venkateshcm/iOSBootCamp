@@ -14,10 +14,10 @@ protocol IVIPERWireFrame: class {
 
 class VIPERWireFrame: IVIPERWireFrame {
 
-    let parentRouter: IAppRouter
+    let appRouter: IAppRouter
 
-    init(parentRouter: IAppRouter) {
-        self.parentRouter = parentRouter
+    init(appRouter: IAppRouter) {
+        self.appRouter = appRouter
     }
 
 }
