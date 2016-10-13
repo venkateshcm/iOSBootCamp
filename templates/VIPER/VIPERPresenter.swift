@@ -7,13 +7,6 @@
 //
 
 protocol IVIPERPresenter: class {
-
-}
-
-protocol IVIPERInterface: class {
-
-    var presenter: IVIPERPresenter!  { get set }
-
 }
 
 class VIPERPresenter : IVIPERPresenter {
