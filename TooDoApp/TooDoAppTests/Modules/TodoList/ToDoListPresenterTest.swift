@@ -142,6 +142,46 @@ class ToDoListPresenterTest: QuickSpec {
 
         }
 
+        describe("Presenter Handle Interceptor failures") {
+            it("failedToGetTodos should show error message when failed to load ToDo list") {
+                presenter.failedToGetTodos(NSError(domain: "todo", code: 1, userInfo :[:]))
+                
+                expect(viewMock.invocations.count) == 2
+                expect(viewMock.invocations).to(contain("hideLoading()"))
+                expect(viewMock.invocations).to(contain("showErrorMessage(The operation couldn’t be completed. (todo error 1.))"))
+            }
+            
+            it("failedToDeleteTodo should show error message when failed to delete ToDo Item") {
+
+                presenter.failedToDeleteTodo(NSError(domain: "todo", code: 2, userInfo :[:]))
+                
+                expect(viewMock.invocations.count) == 5
+                expect(viewMock.invocations).to(contain("hideLoading()"))
+                expect(viewMock.invocations).to(contain("showErrorMessage(The operation couldn’t be completed. (todo error 2.))"))
+                expect(viewMock.invocations).to(contain("showLoading()"))
+                expect(viewMock.invocations).to(contain("redisplayTodos()"))
+                expect(interceptorMock.invocations.count) == 1
+                expect(interceptorMock.invocations).to(contain("getTodos()"))
+            }
+            
+        }
+        
+        describe("Presenter Handling view data calls") {
+            it("numberOfTodos should return number of Todos in view model") {
+                viewModel.todos = [TodoItem(identifier: "id1",description: "Item 1"),
+                                   TodoItem(identifier: "id2",description: "Item 2")]
+                
+                expect(presenter.numberOfTodos) == 2
+            }
+            
+            it("todoItemDescriptionAtIndex should show error message when failed to delete ToDo Item") {
+                viewModel.todos = [TodoItem(identifier: "id1",description: "Item 1"),
+                                   TodoItem(identifier: "id2",description: "Item 2")]
+                
+                expect(presenter.todoItemDescriptionAtIndex(1)) == "Item 2"
+            }
+            
+        }
         
         
     }
