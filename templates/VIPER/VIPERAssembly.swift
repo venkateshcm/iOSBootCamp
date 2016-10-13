@@ -28,7 +28,7 @@ class VIPERAssembly: AssemblyType {
             return presenter
         }
 
-        container.register(IVIPERView.self) {  (r, viewModel:VIPERViewModel ,appRouter: IAppRouter) in
+        container.register(VIPERView.self) {  (r, appRouter: IAppRouter, viewModel:VIPERViewModel) in
             let view = VIPERView()
             let presenter = r.resolve(IVIPERPresenter.self, arguments: (view as IVIPERView,viewModel:viewModel, appRouter))!
             view.presenter = presenter
